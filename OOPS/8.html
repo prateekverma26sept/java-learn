@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>code</title>
+</head>
+
+<body>
+  <pre>
+    class TrafficLight
+    {
+     
+       String color;
+    
+      int duration;
+   
+   
+      TrafficLight(String color, int duration)
+    {
+       
+       this.color = color;
+     
+         this.duration = duration;
+   
+       }
+   
+     
+      void changeColor(String newColor) 
+   {
+      
+        this.color = newColor;
+    
+      }
+   
+    
+          boolean isRed()
+    {
+   
+           return color.equalsIgnoreCase("red");
+   
+       }
+   
+     
+       boolean isGreen() 
+      {
+   
+           return color.equalsIgnoreCase("green");
+   
+       }
+   
+       
+       void printStatus() 
+   {
+        
+      System.out.println("Traffic Light: " + color + ", Duration: " + duration + " seconds");
+   
+       }
+   
+       
+     public static void main(String st[])
+    {
+     
+          TrafficLight trafficLight = new TrafficLight("red", 30);
+   
+   
+           trafficLight.printStatus();
+   
+         
+         if (trafficLight.isRed()) 
+         {
+            
+      System.out.println("Stop!");
+   
+           }
+   
+         
+   
+           trafficLight.changeColor("green");
+   
+     
+         trafficLight.printStatus();
+   
+    
+            if (trafficLight.isGreen())
+        {
+    
+              System.out.println("Go!");
+     
+         }
+     
+     }
+   
+   }
+   OUTPUT:
+   Traffic Light: red, Duration:30 seconds
+   Stop!
+   Traffic Light: green, Duration:30 seconds
+   Go!
+  </pre>
+</body>
+
+</html>

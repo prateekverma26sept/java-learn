@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scrollable Read-Only ResultSet Tutorial</title>
+</head>
+
+<body>
+  <pre>
+    import java.sql.Connection;
+    import java.sql.DriverManager;
+    import java.sql.PreparedStatement;
+    import java.sql.ResultSet;
+    import java.sql.SQLException;
+    import java.util.Scanner;
+
+    public class ScrollableResultSetExample {
+
+        public static void main(String[] args) {
+            String jdbcUrl = "jdbc:mysql://localhost:3306/your_database";
+            String username = "your_username";
+            String password = "your_password";
+            
+            Connection connection = null;
+            PreparedStatement preparedStatement = null;
+            ResultSet resultSet = null;
+            Scanner scanner = new Scanner(System.in);
+
+            try {
+                // Establish a connection
+                connection = DriverManager.getConnection(jdbcUrl, username, password);
+
+                // SQL query to select all rows
+                String selectSQL = "SELECT id, name, age, department FROM Employees";
+
+                // Create a scrollable, read-only ResultSet
+                preparedStatement = connection.prepareStatement(selectSQL,
+                        ResultSet.TYPE_SCROLL_INSENSITIVE,
+                        ResultSet.CONCUR_READ_ONLY);
+
+                // Execute the query and get the scrollable ResultSet
+                resultSet = preparedStatement.executeQuery();
+
+                // Ask the user for the row number
+                System.out.print("Enter the row number you want to view: ");
+                int rowNumber = scanner.nextInt();
+
+                // Move to the specified row number
+                if (resultSet.absolute(rowNumber)) {
+                    // Retrieve and display data from the specified row
+                    int id = resultSet.getInt("id");
+                    String name = resultSet.getString("name");
+                    int age = resultSet.getInt("age");
+                    String department = resultSet.getString("department");
+
+                    System.out.println("Row " + rowNumber + " - ID: " + id + ", Name: " + name + ", Age: " + age + ", Department: " + department);
+                } else {
+                    System.out.println("Invalid row number. Please enter a valid row number.");
+                }
+
+            } catch (SQLException e) {
+                e.printStackTrace();
+            } finally {
+                // Close resources
+                try {
+                    if (resultSet != null) resultSet.close();
+                    if (preparedStatement != null) preparedStatement.close();
+                    if (connection != null) connection.close();
+                } catch (SQLException e) {
+                    e.printStackTrace();
+                }
+                scanner.close();
+            }
+        }
+    }
+
+    OUTPUT EXAMPLE:
+    Enter the row number you want to view: 2
+    Row 2 - ID: 2, Name: Jane Smith, Age: 25, Department: Sales
+  </pre>
+</body>
+
+</html>

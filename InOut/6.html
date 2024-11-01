@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>code</title>
+</head>
+
+<body>
+  <pre>
+    import java.util.Scanner;
+
+    class Main
+    {
+        public static void main(String st[])
+          {
+                    boolean  x;
+              Scanner str=new Scanner(System.in);
+             System.out.println("Enter value:");
+    
+             try
+                   { 
+                               x=str.nextBoolean();
+                         System.out.println("Entered value:"+x);
+                   }
+            catch(java.util.InputMismatchException t)
+                {
+                      System.out.println("\nPlease enter  valid value");
+                     System.out.println(t.getClass());
+                 }
+            catch(Throwable t)
+                {
+                     System.out.println(t.getMessage());
+                 }
+          }
+    }
+
+    OUTPUT:
+    Enter value:
+    true
+    Entered value:true
+  </pre>
+</body>
+
+</html>

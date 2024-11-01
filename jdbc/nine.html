@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CRUD Operations with PreparedStatement</title>
+</head>
+
+<body>
+  <pre>
+    import java.sql.Connection;
+    import java.sql.DriverManager;
+    import java.sql.PreparedStatement;
+    import java.sql.ResultSet;
+    import java.sql.SQLException;
+    import java.util.Scanner;
+
+    public class EmployeeCRUD {
+
+        private static final String JDBC_URL = "jdbc:mysql://localhost:3306/your_database";
+        private static final String USERNAME = "your_username";
+        private static final String PASSWORD = "your_password";
+
+        public static void main(String[] args) {
+            Scanner scanner = new Scanner(System.in);
+            boolean exit = false;
+
+            while (!exit) {
+                System.out.println("\nMenu:");
+                System.out.println("1: Show all employees");
+                System.out.println("2: Insert a new employee");
+                System.out.println("3: Update an existing employee");
+                System.out.println("4: Delete an employee");
+                System.out.println("5: Exit");
+                System.out.print("Choose an option: ");
+                int choice = scanner.nextInt();
+                scanner.nextLine(); // Consume newline
+
+                try (Connection connection = DriverManager.getConnection(JDBC_URL, USERNAME, PASSWORD)) {
+                    switch (choice) {
+                        case 1:
+                            showAllEmployees(connection);
+                            break;
+                        case 2:
+                            insertEmployee(scanner, connection);
+                            break;
+                        case 3:
+                            updateEmployee(scanner, connection);
+                            break;
+                        case 4:
+                            deleteEmployee(scanner, connection);
+                            break;
+                        case 5:
+                            exit = true;
+                            break;
+                        default:
+                            System.out.println("Invalid option. Please try again.");
+                    }
+                } catch (SQLException e) {
+                    e.printStackTrace();
+                }
+            }
+            scanner.close();
+        }
+
+        private static void showAllEmployees(Connection connection) throws SQLException {
+            String sql = "SELECT * FROM Employees";
+            try (PreparedStatement preparedStatement = connection.prepareStatement(sql);
+                 ResultSet resultSet = preparedStatement.executeQuery()) {
+
+                System.out.println("ID\tName\t\tAge\tDepartment");
+                System.out.println("---------------------------------------");
+                while (resultSet.next()) {
+                    int id = resultSet.getInt("id");
+                    String name = resultSet.getString("name");
+                    int age = resultSet.getInt("age");
+                    String department = resultSet.getString("department");
+                    System.out.printf("%d\t%s\t\t%d\t%s%n", id, name, age, department);
+                }
+            }
+        }
+
+        private static void insertEmployee(Scanner scanner, Connection connection) throws SQLException {
+            System.out.print("Enter name: ");
+            String name = scanner.nextLine();
+            System.out.print("Enter age: ");
+            int age = scanner.nextInt();
+            scanner.nextLine(); // Consume newline
+            System.out.print("Enter department: ");
+            String department = scanner.nextLine();
+
+            String sql = "INSERT INTO Employees (name, age, department) VALUES (?, ?, ?)";
+            try (PreparedStatement preparedStatement = connection.prepareStatement(sql)) {
+                preparedStatement.setString(1, name);
+                preparedStatement.setInt(2, age);
+                preparedStatement.setString(3, department);
+                preparedStatement.executeUpdate();
+                System.out.println("New employee inserted successfully!");
+            }
+        }
+
+        private static void updateEmployee(Scanner scanner, Connection connection) throws SQLException {
+            System.out.print("Enter ID of the employee to update: ");
+            int id = scanner.nextInt();
+            scanner.nextLine(); // Consume newline
+
+            String sql = "UPDATE Employees SET name = ?, age = ?, department = ? WHERE id = ?";
+            try (PreparedStatement preparedStatement = connection.prepareStatement(sql)) {
+                System.out.print("Enter new name: ");
+                String name = scanner.nextLine();
+                System.out.print("Enter new age: ");
+                int age = scanner.nextInt();
+                scanner.nextLine(); // Consume newline
+                System.out.print("Enter new department: ");
+                String department = scanner.nextLine();
+
+                preparedStatement.setString(1, name);
+                preparedStatement.setInt(2, age);
+                preparedStatement.setString(3, department);
+                preparedStatement.setInt(4, id);
+
+                int rowsAffected = preparedStatement.executeUpdate();
+                if (rowsAffected > 0) {
+                    System.out.println("Employee updated successfully!");
+                } else {
+                    System.out.println("No employee found with ID: " + id);
+                }
+            }
+        }
+
+        private static void deleteEmployee(Scanner scanner, Connection connection) throws SQLException {
+            System.out.print("Enter ID of the employee to delete: ");
+            int id = scanner.nextInt();
+            scanner.nextLine(); // Consume newline
+
+            String sql = "DELETE FROM Employees WHERE id = ?";
+            try (PreparedStatement preparedStatement = connection.prepareStatement(sql)) {
+                preparedStatement.setInt(1, id);
+                int rowsAffected = preparedStatement.executeUpdate();
+                if (rowsAffected > 0) {
+                    System.out.println("Employee deleted successfully!");
+                } else {
+                    System.out.println("No employee found with ID: " + id);
+                }
+            }
+        }
+    }
+
+    OUTPUT EXAMPLE:
+    Menu:
+    1: Show all employees
+    2: Insert a new employee
+    3: Update an existing employee
+    4: Delete an employee
+    5: Exit
+    Choose an option: 1
+    ID      Name            Age     Department
+    ---------------------------------------
+    1       John Doe       30      Marketing
+    2       Jane Smith     25      Sales
+  </pre>
+</body>
+
+</html>

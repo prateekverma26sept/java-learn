@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>code</title>
+</head>
+
+<body>
+  <pre>
+    package mypac2;
+
+    public class Myclass
+    {
+    public int var=10;
+    public void Method()
+    {
+    System.out.println("public method called");
+    }
+    }
+
+    //another file
+    import mypac2.Myclass;
+
+    public class Another
+    {
+    public static void main(String st[])
+    {
+    Myclass obj= new Myclass();
+    System.out.println("var:" + obj.var);
+    obj.Method();
+    }
+    }
+
+    OUTPUT:
+    var=10
+    public method called
+
+  </pre>
+</body>
+
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>code</title>
+</head>
+
+<body>
+  <pre>
+    class Circle1 {
+        private double radius;
+    
+        Circle1(double radius) {
+            this.radius = radius;
+        }
+    
+         double getRadius() {
+            return radius;
+        }
+    
+         void setRadius(double radius) {
+            if (radius >= 0) {
+                this.radius = radius;
+            } else {
+                System.out.println("Radius cannot be negative.");
+            }
+        }
+    
+         double calculateArea() {
+            return Math.PI * radius * radius;
+        }
+    
+         double calculatePerimeter() {
+            return 2 * Math.PI * radius;
+        }
+    
+       
+        public void displayCircleInfo() {
+            System.out.println("Radius: " + radius);
+            System.out.println("Area: " + calculateArea());
+            System.out.println("Perimeter: " + calculatePerimeter());
+        }
+    
+        public static void main(String st[]) {
+          
+            Circle1 circle = new Circle1(5.0);
+    
+            
+            circle.displayCircleInfo();
+    
+            
+            circle.setRadius(10.0);
+            System.out.println("Updated Circle Information:");
+            circle.displayCircleInfo();
+        }
+    }
+    
+    OUTPUT:
+    Radius: 5.0
+    Area: 78.53981633974483
+    Perimeter: 31.415926535897
+
+    Updated Circle Information:
+    Radius: 10.0
+    Area: 314.15926535897
+    Perimeter: 62.831853071795
+  </pre>
+</body>
+
+</html>

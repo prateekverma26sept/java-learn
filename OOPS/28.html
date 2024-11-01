@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>code</title>
+</head>
+
+<body>
+  <pre>
+    class Rectangle1 {
+        private double length;
+        private double width;
+    
+        Rectangle1(double length, double width) {
+            this.length = length;
+            this.width = width;
+        }
+    
+         double getLength() {
+            return length;
+        }
+    
+        void setLength(double length) {
+            if (length > 0) {
+                this.length = length;
+            } else {
+                System.out.println("Length must be positive.");
+            }
+        }
+    
+         double getWidth() {
+            return width;
+        }
+    
+         void setWidth(double width) {
+            if (width > 0) {
+                this.width = width;
+            } else {
+                System.out.println("Width must be positive.");
+            }
+        }
+    
+        double calculateArea() {
+            return length * width;
+        }
+    
+         double calculatePerimeter() {
+            return 2 * (length + width);
+        }
+    
+        
+        public void displayRectangleInfo() {
+            System.out.println("Length: " + width);
+            System.out.println("Area: " + calculateArea());
+            System.out.println("Perimeter: " + length);
+            System.out.println("Width: " + calculatePerimeter());
+        }
+    
+        public static void main(String[] args) {
+            
+            Rectangle1 rectangle = new Rectangle1(5.0, 3.0);
+    
+           
+            rectangle.displayRectangleInfo();
+    
+            
+            rectangle.setLength(7.5);
+            rectangle.setWidth(4.5);
+            System.out.println("\nUpdated Rectangle Information:");
+            rectangle.displayRectangleInfo();
+        }
+    }
+
+      OUTPUT:
+      Length: 5.0
+      Area: 3.0
+      Perimeter: 15.0 
+      Width: 16.0
+
+      pdated Rectangle Information:
+      Length: 7.5
+      Area: 4.5
+      Perimeter: 33.75
+      Width: 24.0
+  </pre>
+</body>
+
+</html>

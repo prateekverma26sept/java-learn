@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>code</title>
+</head>
+
+<body>
+  <pre>
+    interface shape
+    {
+      void getArea();
+    }
+
+    class rectangle implements shape
+    {
+      int l=12;
+      int b=23;
+      int area;
+      public void getArea()
+      {
+        area=l*b;
+        System.out.println("area of rectangle is:"+ area);
+        
+      }
+    }
+
+    class circle implements shape
+    {
+      float pi=3.14f;
+      float r=22.5f;
+      float area1;
+      public void getArea()
+      {
+        area1=pi*(r*r);
+        System.out.println("area of circle is:"+ area1);
+      }
+    }
+
+    class triangle implements shape
+    {
+      int b=12;
+      int h=45;
+      int area3;
+      public void getArea()
+      {
+        area3=(b*h)/2;
+        System.out.println("area of triangle is:"+ area3);
+      }
+    }
+
+    class main 
+    {
+      public static void main(String st[])
+      {
+        shape obj=new rectangle();
+        obj.getArea();
+        shape obj2=new circle();
+        obj2.getArea();
+        shape obj3=new triangle();
+        obj3.getArea();
+      }
+    }
+
+    OUTPUT:
+      area of rectangle:276
+      area of circle:1589.625
+      area of triangle:270
+  </pre>
+</body>
+
+</html>

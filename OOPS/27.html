@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>code</title>
+</head>
+
+<body>
+  <pre>
+    class BankAccount {
+        private String accountNumber;
+        private double balance;
+    
+         BankAccount(String accountNumber, double balance) {
+            this.accountNumber = accountNumber;
+            this.balance = balance;
+        }
+    
+         String getAccountNumber() {
+            return accountNumber;
+        }
+    
+         void setAccountNumber(String accountNumber) {
+            this.accountNumber = accountNumber;
+        }
+    
+         double getBalance() {
+            return balance;
+        }
+    
+        void setBalance(double balance) {
+            if (balance >= 0) {
+                this.balance = balance;
+            } else {
+                System.out.println("Balance cannot be negative.");
+            }
+        }
+    
+        void displayAccountInfo() {
+            System.out.println("Account Number: " + accountNumber);
+            System.out.println("Balance: $" + String.format("%.2f", balance));
+        }
+    
+        public static void main(String[] args) {
+           
+            BankAccount account = new BankAccount("123456789", 1000.50);
+            account.displayAccountInfo();
+            account.setAccountNumber("987654321");
+            account.setBalance(2000.75);
+            System.out.println("\nUpdated Account Information:");
+            account.displayAccountInfo();
+    
+            
+            account.setBalance(-500.00);
+        }
+    }
+
+     OUTPUT:
+     Account Number: 123456789
+     Balance: $1000.50
+
+     Updated Account Information:
+     Account Number: 987654321
+     Balance: $2000.75
+     Balance cannot be negative.
+  </pre>
+</body>
+
+</html>

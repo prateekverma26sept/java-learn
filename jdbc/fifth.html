@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Delete Row from Database Table</title>
+</head>
+
+<body>
+  <pre>
+    import java.sql.Connection;
+    import java.sql.DriverManager;
+    import java.sql.PreparedStatement;
+    import java.sql.SQLException;
+
+    public class DatabaseRowDeleter {
+
+        public static void main(String[] args) {
+            String jdbcUrl = "jdbc:mysql://localhost:3306/your_database";
+            String username = "your_username";
+            String password = "your_password";
+            
+            Connection connection = null;
+            PreparedStatement preparedStatement = null;
+
+            try {
+                // Establish a connection
+                connection = DriverManager.getConnection(jdbcUrl, username, password);
+
+                // SQL query to delete a row
+                String deleteSQL = "DELETE FROM Employees WHERE name = ?";
+
+                // Create a PreparedStatement
+                preparedStatement = connection.prepareStatement(deleteSQL);
+
+                // Set value for the placeholder
+                preparedStatement.setString(1, "John Doe"); // Name of the employee to delete
+
+                // Execute the delete statement
+                int rowsDeleted = preparedStatement.executeUpdate();
+
+                if (rowsDeleted > 0) {
+                    System.out.println("Employee deleted successfully!");
+                }
+
+            } catch (SQLException e) {
+                e.printStackTrace();
+            } finally {
+                // Close resources
+                try {
+                    if (preparedStatement != null) preparedStatement.close();
+                    if (connection != null) connection.close();
+                } catch (SQLException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+    }
+
+    OUTPUT:
+    Employee deleted successfully!
+  </pre>
+</body>
+
+</html>

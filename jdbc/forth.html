@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Update Row in Database Table</title>
+</head>
+
+<body>
+  <pre>
+    import java.sql.Connection;
+    import java.sql.DriverManager;
+    import java.sql.PreparedStatement;
+    import java.sql.SQLException;
+
+    public class DatabaseRowUpdater {
+
+        public static void main(String[] args) {
+            String jdbcUrl = "jdbc:mysql://localhost:3306/your_database";
+            String username = "your_username";
+            String password = "your_password";
+            
+            Connection connection = null;
+            PreparedStatement preparedStatement = null;
+
+            try {
+                // Establish a connection
+                connection = DriverManager.getConnection(jdbcUrl, username, password);
+
+                // SQL query to update a row
+                String updateSQL = "UPDATE Employees SET age = ?, department = ? WHERE name = ?";
+
+                // Create a PreparedStatement
+                preparedStatement = connection.prepareStatement(updateSQL);
+
+                // Set values for each placeholder
+                preparedStatement.setInt(1, 35); // New age
+                preparedStatement.setString(2, "Sales"); // New department
+                preparedStatement.setString(3, "John Doe"); // Employee name to update
+
+                // Execute the update statement
+                int rowsUpdated = preparedStatement.executeUpdate();
+
+                if (rowsUpdated > 0) {
+                    System.out.println("Employee data updated successfully!");
+                }
+
+            } catch (SQLException e) {
+                e.printStackTrace();
+            } finally {
+                // Close resources
+                try {
+                    if (preparedStatement != null) preparedStatement.close();
+                    if (connection != null) connection.close();
+                } catch (SQLException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+    }
+
+    OUTPUT:
+    Employee data updated successfully!
+  </pre>
+</body>
+
+</html>

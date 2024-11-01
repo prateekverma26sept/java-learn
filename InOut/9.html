@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>code</title>
+</head>
+
+<body>
+  <pre>
+    import java.util.Scanner;
+    import java.io.File;
+    import java.io.FileNotFoundException;
+    
+    class main9
+    {
+    public static void main(String st[]) throws java.io.IOException
+    {
+    try
+    {
+    File file1= new File("input.txt");
+    Scanner obj=new Scanner(file1);
+    String str=obj.nextLine();
+    System.out.println(str);
+    }
+    catch(FileNotFoundException e)
+    {
+    System.out.println("file not found");
+    }
+    }
+    }
+
+
+    OUTPUT:
+    akshsjgdshbcjzxnckxmcnzghsgwqerwtyqtreuwiuroskdflmcxnajmXBH
+  </pre>
+</body>
+
+</html>

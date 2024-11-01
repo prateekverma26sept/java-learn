@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>code</title>
+</head>
+
+<body>
+  <pre>
+    class copy
+    {
+    int x;
+    copy(int y)
+    {
+    x=y;
+    }
+    copy(copy t)
+    {
+    x=t.x;
+    }
+    void display()
+    {
+    System.out.println(x);
+    }
+    public static void main(String st[])
+    {
+    copy obj= new copy(10);
+    obj.display();
+    obj.x++;
+    copy obj1=new copy(obj);
+    obj1.display();
+    }
+    
+    
+    }
+
+    OUTPUT:
+    10
+    11
+  </pre>
+</body>
+
+</html>

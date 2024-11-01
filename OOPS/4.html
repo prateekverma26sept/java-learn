@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>code</title>
+</head>
+
+<body>
+  <pre>
+    class Circle
+ {
+ 
+ private double radius;
+     Circle(double radius)
+    {
+ 
+       this.radius = radius;
+
+     }
+
+ 
+    double getRadius()
+    {
+  
+      return radius;
+
+    }
+
+  
+   void setRadius(double radius)
+   {
+ 
+        this.radius = radius;
+ 
+   }
+
+  
+   public double calculateArea() 
+   {
+ 
+       return 3.14159 * radius * radius;
+ 
+   }
+
+ 
+     public double calculateCircumference()
+    {
+ 
+       return 2 * 3.14159 * radius;
+
+    }
+
+   
+
+
+  public static void main(String st[])
+ {
+    
+    Circle circle = new Circle(5.0);
+
+
+   System.out.println("Initial radius: " + circle.getRadius());
+
+
+        System.out.println("Initial area: " + circle.calculateArea());
+ 
+
+       System.out.println("Initial circumference: " + circle.calculateCircumference());
+
+
+           circle.setRadius(7.0);
+
+  
+             System.out.println("\nUpdated radius: " + circle.getRadius());
+
+        System.out.println("Updated area: " + circle.calculateArea());
+  
+      System.out.println("Updated circumference: " + circle.calculateCircumference());
+
+    }
+
+}
+
+OUTPUT:
+Initial radius: 5.0
+Initial area: 78.53975
+Initial circumference: 31.4159
+
+Updated radius: 7.0
+Updated area: 153.93791
+Updated circumference: 43.98226
+  </pre>
+</body>
+
+</html>

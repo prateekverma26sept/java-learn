@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>code</title>
+</head>
+
+<body>
+  <pre>
+    class Person1 {
+        private String name;
+        private int age;
+        private String country;
+    
+        Person1(String name, int age, String country) {
+            this.name = name;
+            this.age = age;
+            this.country = country;
+        }
+    
+        // Getter for name
+        public String getName() {
+            return name;
+        }
+    
+       void setName(String name) {
+            this.name = name;
+        }
+    
+        int getAge() {
+            return age;
+        }
+    
+         void setAge(int age) {
+            if (age &gt= 0) {
+                this.age = age;
+            } else {
+                System.out.println("Age cannot be negative.");
+            }
+        }
+    
+       String getCountry() {
+            return country;
+        }
+    
+         void setCountry(String country) {
+            this.country = country;
+        }
+    
+         void displayPersonInfo() {
+            System.out.println("Name: " + name);
+            System.out.println("Age: " + age);
+            System.out.println("Country: " + country);
+        }
+    
+        public static void main(String[] args) {
+           
+            Person1 person = new Person1("Anaya", 12, "bangladesh");
+    
+           
+            person.displayPersonInfo();
+    
+           
+            person.setName("shanaya");
+            person.setAge(13);
+            person.setCountry("india");
+            System.out.println("\nUpdated Person Information:");
+            person.displayPersonInfo();
+    
+            
+            person.setAge(-5);
+        }
+    }
+    
+    OUTPUT:
+    Name: Anaya
+    Age: 12
+    Country: bangladesh
+
+    Updated Person Information:
+    Name: Shanaya
+    Age: 13
+    Country: india
+    Age cannot be negative.
+  </pre>
+</body>
+
+</html>

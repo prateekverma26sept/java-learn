@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Select Multiple Rows from Database Table</title>
+</head>
+
+<body>
+  <pre>
+    import java.sql.Connection;
+    import java.sql.DriverManager;
+    import java.sql.PreparedStatement;
+    import java.sql.ResultSet;
+    import java.sql.SQLException;
+
+    public class DatabaseRowSelector {
+
+        public static void main(String[] args) {
+            String jdbcUrl = "jdbc:mysql://localhost:3306/your_database";
+            String username = "your_username";
+            String password = "your_password";
+            
+            Connection connection = null;
+            PreparedStatement preparedStatement = null;
+            ResultSet resultSet = null;
+
+            try {
+                // Establish a connection
+                connection = DriverManager.getConnection(jdbcUrl, username, password);
+
+                // SQL query to select multiple rows
+                String selectSQL = "SELECT id, name, age, department FROM Employees";
+
+                // Create a PreparedStatement
+                preparedStatement = connection.prepareStatement(selectSQL);
+
+                // Execute the select statement and retrieve results
+                resultSet = preparedStatement.executeQuery();
+
+                // Process the ResultSet
+                while (resultSet.next()) {
+                    int id = resultSet.getInt("id");
+                    String name = resultSet.getString("name");
+                    int age = resultSet.getInt("age");
+                    String department = resultSet.getString("department");
+
+                    // Display each row's data
+                    System.out.println("ID: " + id + ", Name: " + name + ", Age: " + age + ", Department: " + department);
+                }
+
+            } catch (SQLException e) {
+                e.printStackTrace();
+            } finally {
+                // Close resources
+                try {
+                    if (resultSet != null) resultSet.close();
+                    if (preparedStatement != null) preparedStatement.close();
+                    if (connection != null) connection.close();
+                } catch (SQLException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+    }
+
+    OUTPUT:
+    ID: 1, Name: John Doe, Age: 30, Department: Marketing
+    ID: 2, Name: Jane Smith, Age: 25, Department: Sales
+    ...
+  </pre>
+</body>
+
+</html>

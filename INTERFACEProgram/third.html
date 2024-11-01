@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>code</title>
+</head>
+
+<body>
+  <pre>
+    interface Flyable
+{
+    void fly_obj();
+ }
+class Spacecraft implements Flyable
+{
+   public void fly_obj()
+     {
+         System.out.println("Spacecrfat");
+     }
+   }
+class  Airplane implements Flyable
+{
+   public void fly_obj()
+     {
+         System.out.println(" Airplane");
+     }
+   }
+
+class Helicopter  implements Flyable
+{
+   public void fly_obj()
+     {
+         System.out.println("Helicopter ");
+     }
+   }
+class main
+{
+ public static void main(String st[])
+   {
+      Flyable obj=new Spacecraft();
+      Flyable obj1=new Airplane();
+      Flyable obj2=new Helicopter ();
+                    obj.fly_obj();
+                    obj1.fly_obj();
+                    obj2.fly_obj();
+  }
+}
+
+OUTPUT:
+Spacecrfat
+Airplane
+Helicopter
+  </pre>
+</body>
+
+</html>

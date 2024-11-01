@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>code</title>
+</head>
+
+<body>
+  <pre>
+    interface Drawable
+    {
+       void draw();
+    }
+    
+    class circle implements Drawable
+    {
+       public void draw()
+        {
+         System.out.println("circle is drawing");
+        }
+    }
+    class rectangle implements Drawable
+    {
+       public void draw()
+        {
+         System.out.println("rectangle is drawing");
+        }
+    }
+    
+    class triangle implements Drawable
+    {
+       public void draw()
+        {
+         System.out.println("triangle is drawing");
+        }
+    }
+     class main
+       {
+          public static void main(String st[])
+           {
+              Drawable obj=new circle();
+                         obj.draw();
+              Drawable obj2=new rectangle();
+                         obj2.draw();
+             Drawable obj3=new triangle();
+                         obj3.draw();
+          }
+    }
+    
+ 
+    OUTPUT:
+    circle is drawing
+    rectangle is drawing
+    triangle is drawing
+  </pre>
+</body>
+
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>code</title>
+</head>
+
+<body>
+  <pre>
+    interface Playable
+    { 
+       void play();
+    }
+   
+   class Football implements Playable
+     {
+        public void play()
+           {
+              System.out.println("children are playing football");
+            }
+       }
+   class Vollyball implements Playable
+     {
+         public void play()
+           {
+              System.out.println("children are playing vollyball");
+            }
+       }
+   class Basketball implements Playable
+     {
+         public void play()
+           {
+              System.out.println("children are playing basketball");
+            }
+       }
+    
+   class main
+   {
+     public static void main(String st[])
+      {
+         Playable obj=new Football();
+         Playable obj1=new Vollyball();
+         Playable obj2=new Basketball();
+                    obj.play();
+                    obj1.play();
+                    obj2.play();
+        }
+   }
+
+   
+   OUTPUT:
+   children are playing football
+   children are playing vollyball
+   children are playing basketball
+  </pre>
+</body>
+
+</html>

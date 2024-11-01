@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>code</title>
+</head>
+
+<body>
+  <pre>
+    class Employee
+ {
+    String name;
+
+     String jobTitle;
+
+     double salary;
+
+ 
+    Employee(String name, String jobTitle, double salary)
+     {
+      
+       this.name = name;
+
+        this.jobTitle = jobTitle;
+
+        this.salary = salary;
+ 
+   }
+
+   
+ 
+ String getName()
+ {
+  
+      return name;
+
+    }
+
+
+    String getJobTitle()
+    {
+  
+      return jobTitle;
+
+    }
+
+  
+   double getSalary() 
+   {
+ 
+       return salary;
+
+    }
+
+ 
+     double calculateAnnualSalary()
+   {
+
+        return salary * 12;
+
+    }
+
+ 
+     void updateSalary(double newSalary)
+   {
+
+        this.salary = newSalary;
+
+    }
+
+ 
+     public static void main(String st[])
+  {
+
+               Employee employee = new Employee("John Doe", "Software Engineer", 5000.0);
+
+
+            System.out.println("Initial salary: " + employee.getSalary());
+ 
+       System.out.println("Initial annual salary: " + employee.calculateAnnualSalary());
+
+ 
+       
+       employee.updateSalary(6000.0);
+
+  
+       System.out.println("\nUpdated salary: " + employee.getSalary());
+
+        System.out.println("Updated annual salary: " + employee.calculateAnnualSalary());
+
+    }
+
+}
+
+
+
+
+OUTPUT:
+Initial salary: 5000.0
+Initial annual salary: 60000.0
+
+Updated salary: 6000.0
+pdated annual salary: 72000.0
+  </pre>
+</body>
+
+</html>

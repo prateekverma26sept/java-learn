@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>code</title>
+</head>
+
+<body>
+  <pre>
+    package mypac;
+    public class claA
+    {
+    public void display()
+    {
+    System.out.println("claA called..");
+    }
+    }
+
+    
+    package mypac;
+public class claB
+{
+public void display()
+{
+System.out.println("claB called..");
+}
+}
+
+
+package mypac;
+public class claC
+{
+public void display()
+{
+System.out.println("claC called..");
+}
+}
+
+
+package mypac;
+public class claD
+{
+public void display()
+{
+System.out.println("claD called..");
+}
+}
+
+
+import mypac.claA;
+import mypac.claB;
+import mypac.claC;
+import mypac.claD;
+
+public class main12
+{
+public static void main(String st[])
+{
+ claA obj=new claA();
+obj.diplay();
+claB obj1=new claB();
+obj1.diplay();
+claC obj2=new claC();
+obj2.diplay();
+claD obj3=new claD();
+obj3.diplay();
+}
+}
+
+OUTPUT:
+claA called..
+claB called..
+claC called..
+claD called..
+  </pre>
+</body>
+
+</html>

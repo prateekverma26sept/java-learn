@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>code</title>
+</head>
+
+<body>
+  <pre>
+    package c4.sample;
+
+    public class Myclas
+    {
+    protected int var1=10;
+    protected void method()
+    {
+    System.out.println("protected method called");
+    }
+    }
+
+    package c4.sample;
+public class Aclass extends Myclas
+{
+public static void main(String st[])
+{
+ Aclass obj= new Aclass();
+System.out.println("protected var1:" + obj.var1);
+obj.method();
+}
+}
+
+import c4.sample.Myclas;
+
+public class outside extends Myclas
+{
+public static void main(String st[])
+{
+outside obj= new outside();
+System.out.println("protected var1:" + obj.var1);
+obj.method();
+}
+}
+
+OUTPUT:
+protected var1=10
+protected method called
+  </pre>
+</body>
+
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Insert Row into Database Table</title>
+</head>
+
+<body>
+  <pre>
+    import java.sql.Connection;
+    import java.sql.DriverManager;
+    import java.sql.PreparedStatement;
+    import java.sql.SQLException;
+
+    public class DatabaseRowInserter {
+
+        public static void main(String[] args) {
+            String jdbcUrl = "jdbc:mysql://localhost:3306/your_database";
+            String username = "your_username";
+            String password = "your_password";
+            
+            Connection connection = null;
+            PreparedStatement preparedStatement = null;
+
+            try {
+                // Establish a connection
+                connection = DriverManager.getConnection(jdbcUrl, username, password);
+
+                // SQL query to insert a row
+                String insertSQL = "INSERT INTO Employees (name, age, department) VALUES (?, ?, ?)";
+
+                // Create a PreparedStatement
+                preparedStatement = connection.prepareStatement(insertSQL);
+                
+                // Set values for each placeholder
+                preparedStatement.setString(1, "John Doe");
+                preparedStatement.setInt(2, 30);
+                preparedStatement.setString(3, "Marketing");
+
+                // Execute the insert statement
+                int rowsInserted = preparedStatement.executeUpdate();
+
+                if (rowsInserted > 0) {
+                    System.out.println("A new employee was inserted successfully!");
+                }
+
+            } catch (SQLException e) {
+                e.printStackTrace();
+            } finally {
+                // Close resources
+                try {
+                    if (preparedStatement != null) preparedStatement.close();
+                    if (connection != null) connection.close();
+                } catch (SQLException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+    }
+
+    OUTPUT:
+    A new employee was inserted successfully!
+  </pre>
+</body>
+
+</html>

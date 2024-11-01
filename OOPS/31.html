@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>code</title>
+</head>
+
+<body>
+  <pre>
+    class Car {
+        private String company_name;
+        private String model_name;
+        private int year;
+        private double mileage;
+    
+        
+        Car(String company_name, String model_name, int year, double mileage) {
+            this.company_name = company_name;
+            this.model_name = model_name;
+            this.year = year;
+            this.mileage = mileage;
+        }
+    
+        
+        public String getCompanyName() {
+            return company_name;
+        }
+    
+        void setCompanyName(String company_name) {
+            this.company_name = company_name;
+        }
+    
+        
+        String getModelName() {
+            return model_name;
+        }
+    
+       
+         void setModelName(String model_name) {
+            this.model_name = model_name;
+        }
+    
+      
+         int getYear() {
+            return year;
+        }
+    
+        
+        void setYear(int year)
+        {
+            this.year = year;
+        }
+    
+        
+        public double getMileage()
+        {
+            return mileage;
+        }
+    
+       
+        public void displayCarInfo() {
+            System.out.println("Company Name: " + company_name);
+            System.out.println("Model Name: " + model_name);
+            System.out.println("Year: " + year);
+            System.out.println("Mileage: " + mileage + " miles");
+        }
+    
+        public static void main(String[] args) {
+            
+            Car car = new Car("Toyota", "Camry", 2020, 15000.5);
+    
+            
+            car.setCompanyName("Honda");
+            car.setModelName("Accord");
+            car.setYear(2021);
+    
+            System.out.println("Updated Car Information:");
+            car.displayCarInfo();
+        }
+    }
+
+    
+    OUTPUT:
+    Updated Car Information:
+    Company Name:Honda
+    Model Name: Accord
+    Year: 2021
+    Mileage: 15000.5 miles
+
+  </pre>
+</body>
+
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create Table in Database</title>
+</head>
+
+<body>
+  <pre>
+    import java.sql.Connection;
+    import java.sql.DriverManager;
+    import java.sql.SQLException;
+    import java.sql.Statement;
+
+    public class DatabaseTableCreator {
+
+        public static void main(String[] args) {
+            String jdbcUrl = "jdbc:mysql://localhost:3306/your_database";
+            String username = "your_username";
+            String password = "your_password";
+            
+            Connection connection = null;
+            Statement statement = null;
+
+            try {
+                // Establish a connection
+                connection = DriverManager.getConnection(jdbcUrl, username, password);
+
+                // Create a SQL statement
+                statement = connection.createStatement();
+
+                // SQL query to create a table
+                String createTableSQL = "CREATE TABLE Employees (" +
+                                         "id INT PRIMARY KEY AUTO_INCREMENT, " +
+                                         "name VARCHAR(50), " +
+                                         "age INT, " +
+                                         "department VARCHAR(50))";
+
+                // Execute the SQL statement
+                statement.executeUpdate(createTableSQL);
+                System.out.println("Table 'Employees' created successfully!");
+
+            } catch (SQLException e) {
+                e.printStackTrace();
+            } finally {
+                // Close the resources
+                try {
+                    if (statement != null) statement.close();
+                    if (connection != null) connection.close();
+                } catch (SQLException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+    }
+
+    OUTPUT:
+    Table 'Employees' created successfully!
+  </pre>
+</body>
+
+</html>
