@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>code</title>
+</head>
+
+<body>
+  <pre>
+    class main23
+{
+public static void main(String st[])
+{
+String str="Hello";
+String reverse=reverseString(str);
+System.out.println("Original strings:" + str);
+System.out.println("Reverse strings:" + reverse);
+}
+
+public static String reverseString(String str)
+{
+String reverse=" ";
+for(int i=str.length()-1;i>=0;i--)
+{
+reverse+=str.charAt(i);
+}
+return reverse;
+}
+}
+
+OUTPUT:
+Original strings:Hello
+Reverse strings:olleH
+  </pre>
+</body>
+
+</html>

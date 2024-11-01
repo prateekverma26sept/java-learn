@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>code</title>
+</head>
+
+<body>
+  <pre>
+    class main4
+    {
+    public static void main(String st[])
+    {
+    int arr[][]={{1,5,7},{2,9,3}};
+    int arr1[][]={{11,12,13},{14,15,16}};
+    
+    int sub[][]=new int[2][3];
+    for(int i=0;i&lt2;i++)
+    {
+    for(int j=0;j&lt3;j++)
+    {
+     sub[i][j]=arr1[i][j]-arr[i][j];
+    }
+    }
+    System.out.println("the subtraction of two matrix:");
+    
+    for(int i=0;i&lt2;i++)
+    {
+    for(int j=0;j&lt3;j++)
+    {
+    System.out.println("subtraction of two matrics:" +sub[i][j]);
+    }
+    }
+    }
+    }
+
+    OUTPUT:
+    subtraction of two matrics:10
+    subtraction of two matrics:7
+    subtraction of two matrics:6
+    subtraction of two matrics:12
+    subtraction of two matrics:6
+    subtraction of two matrics:13
+  </pre>
+</body>
+
+</html>

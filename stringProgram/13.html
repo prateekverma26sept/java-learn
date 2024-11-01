@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>code</title>
+</head>
+
+<body>
+  <pre>
+    class main13
+{
+public static void main(String st[])
+{
+String str="here we count a words in this line";
+int wordCount= countWord(str);
+System.out.println("Number of words:" + wordCount);
+}
+
+public static int countWord(String str)
+{
+ if(str==null || str.isEmpty())
+{
+return 0;
+}
+String arr[]=str.split("\\s+");
+return arr.length;
+}
+}
+
+OUTPUT:
+Number of words:8
+  </pre>
+</body>
+
+</html>

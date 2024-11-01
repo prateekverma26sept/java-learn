@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>code</title>
+</head>
+
+<body>
+  <pre>
+    class main8
+    {
+    public static void main(String st[])
+    {
+    int arr[][]={
+          {1,2,3,4},
+          {23,56,21,11},
+          {12,89,90,100},
+          {45,78,55,13}
+    };
+    
+    int evenCount=0;
+    int oddCount=0;
+    
+    for(int i=0;i&ltarr.length;i++)
+    {
+    for(int j=0;j&ltarr[i].length;j++)
+    {
+     if(arr[i][j]%2==0)
+    {
+     evenCount++;
+    }else
+    {
+    oddCount++;
+    }
+    }
+    }
+    
+    System.out.println("Frequency of even number:"+ evenCount);
+    
+    System.out.println("Frequency of odd number:"+ oddCount);
+    }
+    }
+
+    OUTPUT:
+    Frequency of even number:7
+    Frequency of odd number:9
+  </pre>
+</body>
+
+</html>

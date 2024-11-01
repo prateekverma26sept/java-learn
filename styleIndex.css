@@ -1,0 +1,7 @@
+body a {
+    display: inline-block;
+    margin: 12px 0px;
+    text-decoration: none;
+    font-family: 'Courier New', Courier, monospace;
+    color:rgb(39, 45, 48)
+}

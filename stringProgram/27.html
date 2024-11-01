@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>code</title>
+</head>
+
+<body>
+  <pre>
+    class main27
+    {
+    public static void main(String st[])
+    {
+    String str="she is good at mathematics";
+    String words[]=str.split(" ");
+    String largestWord=words[0];
+    String smallestWord=words[0];
+    
+    for(int i=1;i&ltwords.length;i++)
+    {
+    if(words[i].length()&gtlargestWord.length())
+    {
+    largestWord=words[i];
+    }
+    
+    if(words[i].length()&ltsmallestWord.length())
+    {
+    smallestWord=words[i];
+    }
+    }
+    System.out.println("Largest word:" + largestWord);
+    System.out.println("Smallest word:" + smallestWord);
+    }
+    }
+
+    OUTPUT:
+    Largest word:athematics
+    Smallest word:is
+  </pre>
+</body>
+
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>code</title>
+</head>
+
+<body>
+  <pre>
+    class main10
+    {
+    public static void main(String st[])
+    {
+    int arr[][]={
+          {1,2,3,4},
+          {5,6,7,8},
+          {12,11,9,10},
+          {13,14,15,16}
+    };
+    
+    System.out.println("Original Matrix:");
+    printMatrix(arr);
+    
+    int[][] transpose = getTranspose(arr);
+    
+    System.out.println("Transpose of Matrix:");
+    printMatrix(transpose);
+    }
+    
+    
+    public static int[][] getTranspose(int arr[][])
+    {
+    int[][] transpose=new int[arr[0].length][arr.length];
+    
+    for(int i=0;i&ltarr.length;i++)
+    {
+    for(int j=0;j&ltarr[i].length;j++)
+    {
+    transpose[j][i]=arr[i][j];
+    }
+    }
+    
+    return transpose;
+    }
+    public static void printMatrix(int arr[][])
+    {
+    for(int i=0;i&ltarr.length;i++)
+    {
+    for(int j=0;j&ltarr[i].length;j++)
+    {
+    
+    System.out.print(arr[i][j]+" ");
+    }
+    System.out.println();
+    
+    }
+    }
+    }
+
+    OUTPUT:
+    Original Matrix:
+    1 2 3 4
+    5 6 7 8
+    12 11 9 10
+    13 14 15 16
+
+    Transpose of Matrix:
+    1 5 12 13
+    2 6 11 14
+    3 7 9 15
+    4 8 10 16
+  </pre>
+</body>
+
+</html>
