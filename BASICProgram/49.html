@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>code</title>
+</head>
+
+<body>
+  <pre>
+    import java.util.Scanner;
+
+    class main49
+    {
+    public static void main(String st[])
+    {
+    Scanner obj= new Scanner(System.in);
+    System.out.println("Enter sales amount:");
+    double sales=obj.nextDouble();
+    
+    System.out.println("Enter commission rate(in %):");
+    double commissionRate=obj.nextDouble();
+    
+    double commission=calculateCommission(sales,commissionRate);
+    System.out.println("Commission:" + commission);
+    System.out.println("Commission percentage:" + commissionRate + "%");
+    
+    
+    }
+    
+    public static double  calculateCommission(double sales, double commissionRate)
+    {
+    return sales*(commissionRate/100);
+    }
+    
+    }
+
+    OUTPUT:
+    Enter sales amount:
+    10000
+    Enter commission rate(in %):
+    5
+    Commission:500.0
+    Commission percentage:5.0%
+  </pre>
+</body>
+
+</html>

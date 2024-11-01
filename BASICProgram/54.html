@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>code</title>
+</head>
+
+<body>
+  <pre>
+    class main54
+    {
+    public static void main(String st[])
+    {
+    int week=2;
+    
+    String day=findDay(week);
+    
+    System.out.println("Day of week:" + day);
+    }
+    
+    public static String findDay(int week)
+    {
+    String[] days={"Sunday","Monday","Tuesday","Wednesday","Thrusday","Friday","Saturday"};
+    return days[week-1];
+    }
+    }
+
+    OUTPUT:
+    Day of week:Monday
+  </pre>
+</body>
+
+</html>

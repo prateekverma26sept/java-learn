@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>code</title>
+</head>
+
+<body>
+  <pre>
+    import java.util.Calendar;
+    import java.util.Scanner;
+    
+    class main52
+    {
+    public static void main(String st[])
+    {
+    Scanner obj= new Scanner(System.in);
+    int year=2023;
+    
+    System.out.println("Enter month (1-12):");
+    int month=obj.nextInt();
+    
+    Calendar ob=Calendar.getInstance();
+    ob.set(year,month-1,1);
+    int days=ob.getActualMaximum(Calendar.DAY_OF_MONTH);
+    
+    System.out.println("Number of days in month:" + days);
+    }
+    }
+
+    OUTPUT:
+    Enter month (1-12):
+    5
+    Number of days in month:31
+  </pre>
+</body>
+
+</html>

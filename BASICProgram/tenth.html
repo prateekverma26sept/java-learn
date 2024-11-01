@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>code</title>
+</head>
+
+<body>
+  <pre>
+    import java.io.BufferedReader;
+    import java.io.IOException;
+    import java.io.InputStreamReader;
+    
+    class main10
+    {
+    public static void main(String st[]) throws IOException
+    {
+    BufferedReader obj=new BufferedReader(new InputStreamReader(System.in));
+    System.out.println("enter an integer");
+    String str=obj.readLine();
+    int num=Integer.parseInt(str);
+    
+    int sum=0;
+    while(num!=0)
+    {
+    sum+=num%10;
+    num/=10;
+    }
+     System.out.println("sum of digits:" + sum);
+    }
+    }
+
+    OUTPUT:
+    enter an integer:4634
+    sum of digits:17
+  </pre>
+</body>
+
+</html>

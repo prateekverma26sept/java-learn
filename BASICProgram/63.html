@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>code</title>
+</head>
+
+<body>
+  <pre>
+    import java.util.Scanner;
+
+
+    class NegativeNumberException extends Exception
+    {
+     NegativeNumberException(String message)
+      {
+      super(message); 
+      }
+    }
+    
+    class main63
+    {
+    public static void main(String st[]) 
+    {
+    Scanner obj=new Scanner(System.in);
+    
+    System.out.println("Enter a positive number:");
+    int num=obj.nextInt();
+    
+    try
+    {
+    if(num&t0)
+    {
+    throw new NegativeNumberException("negative number are not allowed");
+    }
+    
+    int count=String.valueOf(Math.abs(num)).length();
+    System.out.println("Number of digits:" + count);
+    }
+    catch(NegativeNumberException e)
+    {
+    System.out.println(e.getMessage());
+    
+    }
+    
+    }
+    }
+
+    OUTPUT:
+    Enter a positive number:
+    2346545
+    Number of digits:7
+  </pre>
+</body>
+
+</html>

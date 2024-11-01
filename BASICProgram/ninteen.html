@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>code</title>
+</head>
+
+<body>
+  <pre>
+    import java.util.Scanner;
+    class main19
+    {
+    public static void main(String st[])
+    {
+    Scanner obj=new Scanner(System.in);
+    System.out.println("Enter seconds:");
+    int sec=obj.nextInt();
+    
+    int hours=sec/3600;
+    int minutes=(sec%3600)/60;
+    int remainingSeconds= sec%60;
+    
+    System.out.println( sec + " seconds is equal to:");
+    System.out.println(hours + " hours ");
+    System.out.println(minutes + "minutes" );
+    System.out.println(remainingSeconds +  "sec");
+    }
+    }
+
+    OUTPUT:
+    Enter seconds:
+    3661
+    3661 seconds is equal to:
+    1 hours
+    1 minutes
+    1 sec
+
+  </pre>
+</body>
+
+</html>

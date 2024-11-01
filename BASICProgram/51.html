@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>code</title>
+</head>
+
+<body>
+  <pre>
+    import java.io.BufferedReader;
+    import java.io.IOException;
+    import java.io.InputStreamReader;
+    
+    class main51
+    {
+    public static void main(String st[]) throws IOException
+    {
+    BufferedReader obj= new BufferedReader(new InputStreamReader(System.in));
+    
+    System.out.println("Enter first number:");
+    int num1=Integer.parseInt(obj.readLine());
+    
+    System.out.println("Enter second number:");
+    int num2=Integer.parseInt(obj.readLine());
+    
+    System.out.println("Enter third number:");
+    int num3=Integer.parseInt(obj.readLine());
+    
+    int greatest=findGreatest(num1,num2,num3);
+    System.out.println("the greatest number is:" + greatest);
+    
+    }
+    
+    public static int findGreatest(int num1,int num2,int num3)
+    {
+    if(num1&gt=num2 && num1&gt=num3)
+    {
+    return num1;
+    }
+    else if(num2&gt=num1 && num2*gt=num3)
+    {
+    return num2;
+    }
+    else
+    {
+    return num3;
+    }
+    }
+    }
+
+    OUTPUT:
+    Enter first number:
+    12
+    Enter second number:
+    18
+    Enter third number:
+    78
+    the greatest number is:78
+  </pre>
+</body>
+
+</html>

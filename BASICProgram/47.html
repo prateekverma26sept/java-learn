@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>code</title>
+</head>
+
+<body>
+  <pre>
+    import java.lang.Math;
+
+    class main47
+    {
+    public static void main(String st[])
+    {
+    double principle=10000.0;
+    double rate=5.0;
+    int time=5;
+    int n=12;
+    
+    double amount=calculateCompoundInterest(principle,rate,time,n);
+    double interest=amount-principle;
+    
+    System.out.println("Principle amount:" + principle);
+    System.out.println("Annual interest rate:" + rate + "%");
+    System.out.println("Time period:" + time + "years");
+    System.out.println("Interest applied per year:" + n + "times");
+    System.out.println("Compound interest:" + interest);
+    System.out.println("Amount:" + amount);
+    }
+    
+    public static double calculateCompoundInterest(double principle,double rate,int time,int n)
+    {
+    return principle*Math.pow(1+(rate/100)/n,n*time);
+    }
+    }
+
+    OUTPUT:
+    Principle amount:10000.0
+    Annual interest rate:5.0%
+    Time period:5 years
+    Interest applied per year:12 times
+    Compound interest:2762.476744125292
+    Amount:12762.476744125292
+  </pre>
+</body>
+
+</html>

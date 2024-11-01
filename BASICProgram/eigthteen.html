@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>code</title>
+</head>
+
+<body>
+  <pre>
+    import java.io.BufferedReader;
+    import java.io.IOException;
+    import java.io.InputStreamReader;
+    
+    class main18
+    {
+    public static void main(String st[]) throws IOException
+    {
+    BufferedReader obj= new BufferedReader(new InputStreamReader(System.in));
+    System.out.println("Enter a string:");
+    String str=obj.readLine();
+    
+    try
+    {
+    int x=Integer.parseInt(str);
+    System.out.println("converted integer:" + x);
+    }
+    catch(NumberFormatException e)
+    {
+     System.out.println("unable to convert..");
+    }
+    }
+    }
+
+    OUTPUT:
+    Enter a string:
+    125
+    converted integer:125
+  </pre>
+</body>
+
+</html>

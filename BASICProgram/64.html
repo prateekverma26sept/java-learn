@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>code</title>
+</head>
+
+<body>
+  <pre>
+    import java.util.Scanner;
+
+
+    class main64
+    {
+      
+       public static void main(String[] args)
+    {
+   
+           Scanner scanner = new Scanner(System.in);
+   
+   
+           System.out.println("Simple Calculator");
+       
+       System.out.println("1. Addition");
+         
+     System.out.println("2. Subtraction");
+           
+   System.out.println("3. Multiplication");
+          
+    System.out.println("4. Division");
+           
+   System.out.println("5. Exit");
+   
+           
+   while (true) 
+   {
+               
+      System.out.print("Choose an option: ");
+    
+              int option = scanner.nextInt();
+   
+           
+       if (option == 5) 
+   {
+     
+     System.out.println("Exiting...");
+         
+             break;
+               }
+   
+              
+    System.out.print("Enter first number: ");
+     
+             double num1 = scanner.nextDouble();
+   
+          
+        System.out.print("Enter second number: ");
+              
+    double num2 = scanner.nextDouble();
+   
+              
+    switch (option) 
+   {
+      case 1:
+                      
+    System.out.println(num1 + " + " + num2 + " = " + (num1 + num2));
+     
+       break;
+              
+      case 2:
+                     
+     System.out.println(num1 + " - " + num2 + " = " + (num1 - num2));
+     
+       break;
+                  
+      case 3:
+                      
+    System.out.println(num1 + " * " + num2 + " = " + (num1 * num2));
+       
+        break;
+                  
+     case 4:
+                      
+    if (num2 != 0) 
+   {
+                           
+     System.out.println(num1 + " / " + num2 + " = " + (num1 / num2));
+    
+    } else {
+       
+       System.out.println("Error: Division by zero.");
+                      
+    }
+                      
+      break;
+                  
+      default:
+                      
+      System.out.println("Invalid option. Please choose again.");
+         
+    }
+          
+    }
+       
+   }
+   }
+
+   
+   OUTPUT:
+   Simple Calculator
+   1. Addition
+   2. Subtraction
+   3. Multiplication
+   4. Division
+   5. Exit
+   Choose an option: 3
+   Enter first number:3.5
+   Enter second number:12
+   3.5 x 12.0 = 42.0
+  </pre>
+</body>
+
+</html>

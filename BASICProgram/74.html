@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>code</title>
+</head>
+
+<body>
+  <pre>
+    import java.util.Scanner;
+
+
+
+    class main74
+    {
+    
+        
+         public static void main(String[] args)
+         {
+    
+     
+           Scanner scanner = new Scanner(System.in);
+    
+            int positiveCount = 0;
+      
+          int negativeCount = 0;
+     
+           int zeroCount = 0;
+    
+       
+           while (true)
+         {
+       
+             System.out.print("Enter a number (or -999 to stop): ");
+      
+              int num = scanner.nextInt();
+    
+       
+             if (num == -999) 
+             {
+         
+               break;
+     
+             }
+    
+      
+              if (num > 0) 
+               {
+         
+                 positiveCount++;
+      
+              } else if (num &lt 0)
+               {
+          
+                 negativeCount++;
+     
+               } else
+                 {
+          
+                  zeroCount++;
+     
+               }
+        
+         }
+    
+       
+            System.out.println("Positive numbers: " + positiveCount);
+    
+            System.out.println("Negative numbers: " + negativeCount);
+      
+          System.out.println("Zeros: " + zeroCount);
+    
+        }
+    
+    }
+
+    OUTPUT:
+    Enter a number (or -999 to stop):12
+    Enter a number (or -999 to stop):34
+    Enter a number (or -999 to stop):89
+    Enter a number (or -999 to stop):100
+    Enter a number (or -999 to stop):-346
+    Enter a number (or -999 to stop):774
+    Enter a number (or -999 to stop):-123
+    Enter a number (or -999 to stop):-999
+    Positive numbers:5
+    Negative numbers:2
+    Zeros:0
+  </pre>
+</body>
+
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>code</title>
+</head>
+
+<body>
+  <pre>
+    import java.util.Scanner;
+
+    class main26
+    {
+    public static void main(String st[])
+    {
+     Scanner obj= new Scanner(System.in);
+    System.out.println("Enter a positive number:");
+    int num=obj.nextInt();
+    
+    int sum=addDigit(num);
+    System.out.println("Sum is:" + sum);
+    }
+    public static int addDigit(int num)
+    {
+    int sum=0;
+    while(num!=0)
+    {
+    int digit=num%10;
+    sum+=digit;
+    num/=10;
+    }
+    return sum;
+    }
+    }
+
+    OUTPUT:
+    Enter a positive number:
+    35285482
+    Sum is:37
+  </pre>
+</body>
+
+</html>

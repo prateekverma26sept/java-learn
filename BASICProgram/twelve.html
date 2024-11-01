@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>code</title>
+</head>
+
+<body>
+  <pre>
+    import java.io.BufferedReader;
+    import java.io.IOException;
+    import java.io.InputStreamReader;
+    
+    class main12
+    {
+    public static void main(String st[]) throws IOException
+    {
+    BufferedReader obj=new BufferedReader(new InputStreamReader(System.in));
+    System.out.println("Enter a string:");
+    String str=obj.readLine();
+    
+    int letterCount=0;
+    int spaceCount=0;
+    int numberCount=0;
+    int otherCount=0;
+    
+    for(char c : str.toCharArray())
+    {
+    if(Character.isLetter(c))
+    {
+    letterCount++;
+    }else if(Character.isSpaceChar(c))
+    {
+    spaceCount++;
+    }else if(Character.isDigit(c))
+    {
+    numberCount++;
+    }else
+    {
+    otherCount++;
+    }
+    }
+    System.out.println("Letters:" + letterCount);
+    System.out.println("Spaces:" + spaceCount);
+    System.out.println("Numbers:" + numberCount);
+    System.out.println("Other character:" + otherCount);
+    }
+    }
+
+    OUTPUT:
+    Enter a string:
+    stop being nice to everyone...ri8
+     Letters:25
+     Spaces:5
+     Numbers:1
+     Other character:2
+  </pre>
+</body>
+
+</html>

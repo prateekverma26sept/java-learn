@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>code</title>
+</head>
+
+<body>
+  <pre>
+    import java.io.BufferedReader;
+    import java.io.IOException;
+    import java.io.InputStreamReader;
+    
+    
+    class main45
+    {
+    public static void main(String st[]) throws IOException
+    {
+    BufferedReader obj=new BufferedReader(new InputStreamReader(System.in));
+    System.out.println("Enter the number uniits consumed:");
+    double units=Double.parseDouble(obj.readLine());
+    double bill=calculateBill(units);
+    System.out.println("Your bill is:" + bill);
+    }
+    
+    public static double calculateBill(double units)
+    {
+    if(units&lt=100)
+    {
+    return units*0.50;
+    }
+    else if(units&lt=300)
+    {
+    return 50+(units-100)*0.75;
+    }else
+    {
+    return 275+(units-300)*1.00;
+    }
+    }
+    }
+
+    OUTPUT:
+    Enter the number uniits consumed:
+    130
+    Your bill is:72.5
+  </pre>
+</body>
+
+</html>

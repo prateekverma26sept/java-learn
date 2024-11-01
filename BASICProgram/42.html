@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>code</title>
+</head>
+
+<body>
+  <pre>
+    class main42
+    {
+    
+    public static void main(String st[])
+    {
+    char ch='b';
+    
+    if(isVowel(ch))
+    {
+    System.out.println(ch + " is vowel");
+    }else
+    {
+    System.out.println(ch + " is constant");
+    }
+    }
+    
+    public static  boolean isVowel(char ch)
+    {
+    ch=Character.toLowerCase(ch);
+    return ch=='a' || ch=='e' || ch=='i' || ch=='o' || ch=='u';
+    
+    }
+    }
+    OUTPUT:
+    b is constant
+  </pre>
+</body>
+
+</html>

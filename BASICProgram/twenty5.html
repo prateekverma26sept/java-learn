@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>code</title>
+</head>
+
+<body>
+  <pre>
+    class main25
+    {
+    public static void main(String st[])
+    {
+    int num=232;
+    
+    if(isPallindrome(num))
+    {
+    System.out.println(num+ " is a pallindrome number..");
+    }else
+    {
+    System.out.println(num+ " is not a pallindrome number..");
+    }
+    }
+    public static boolean isPallindrome(int num)
+    {
+    int reversedNum=0;
+    int og=num;
+    
+    while(num!=0)
+    {
+    int digit=num%10;
+    reversedNum=reversedNum*10+digit;
+    num/=10;
+    }
+    return og==reversedNum;
+    }
+    }
+
+    OUTPUT:
+    232 is a pallindrome number..
+  </pre>
+</body>
+
+</html>

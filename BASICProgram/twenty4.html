@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>code</title>
+</head>
+
+<body>
+  <pre>
+    class main24
+{
+public static void main(String st[])
+{
+int num=111,rs=0,rem,temp=num;
+
+while(temp>0)
+{
+rem=temp%10;
+rs=(rs*10)+rem;
+temp/=10;
+}
+if(rs==num)
+{
+System.out.println(rs + "is pallindrome");
+}else
+{
+System.out.println(rs + "not a pallindrome ");
+}
+}
+}
+
+OUTPUT:
+111is pallindrome
+  </pre>
+</body>
+
+</html>

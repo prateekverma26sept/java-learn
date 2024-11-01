@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>code</title>
+</head>
+
+<body>
+  <pre>
+    import java.io.BufferedReader;
+    import java.io.IOException;
+    import java.io.InputStreamReader;
+    
+    class main61
+    {
+    public static void main(String st[]) throws IOException
+    {
+    BufferedReader obj= new BufferedReader(new InputStreamReader(System.in) );
+    System.out.println("Enter an integer:");
+    
+    int num=Integer.parseInt(obj.readLine());
+    System.out.println("Multiplication table of" +num+ ":");
+    
+    for(int i=1;i&lt=10;i++)
+    {
+    System.out.println(num + "x" + i + "=" + (num*i));
+    } 
+    }
+    }
+
+    OUTPUT:
+    Enter an integer:
+    7
+    7x1=7
+    7x2=14
+    7x3=21
+    7x4=28
+    7x5=35
+    7x6=42
+    7x7=49
+    7x8=56
+    7x9=63
+    7x10=70
+  </pre>
+</body>
+
+</html>

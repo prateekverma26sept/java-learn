@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>code</title>
+</head>
+
+<body>
+  <pre>
+    class main71
+    {
+   
+   
+       public static void main(String[] args) 
+       {
+   
+      
+           int[] array = {10, 20, 30, 40, 50};
+     
+         int elementToFind = 30;
+   
+         
+        int index = -1;
+           
+         for (int i = 0; i &lt array.length; i++)
+         {
+              
+            if (array[i] == elementToFind) 
+                 {
+                   
+                   index = i;
+                
+                    break;
+       
+                 }
+           
+         }
+   
+          
+          if (index != -1) 
+            {
+   
+               System.out.println("Element " + elementToFind + " found at index " + index);
+    
+            } else
+              {
+    
+               System.out.println("Element " + elementToFind + " not found in array");
+      
+        }
+       }
+   }
+
+   OUTPUT:
+   Element 30 found at index 2
+  </pre>
+</body>
+
+</html>

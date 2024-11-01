@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>code</title>
+</head>
+
+<body>
+  <pre>
+    import java.io.IOException;
+
+    class main5
+    {
+    public static void main(String st[]) throws IOException
+    {
+    java.io.InputStreamReader isr= new java.io.InputStreamReader(System.in);
+    java.io.BufferedReader obj= new java.io.BufferedReader(isr);
+    System.out.println("enter the five number:");
+    String str=obj.readLine();
+    String str1=obj.readLine();
+    String str2=obj.readLine();
+    String str3=obj.readLine();
+    String str4=obj.readLine();
+    int x=Integer.parseInt(str);
+    int y=Integer.parseInt(str1);
+    int z=Integer.parseInt(str2);
+    int o=Integer.parseInt(str3);
+    int k=Integer.parseInt(str4);
+    
+    System.out.println("average of numbers is:" + ((x+y+z+o+k)/5));
+    }
+    }
+
+    OUTPUT:
+    enter the five number:
+    12
+    23
+    45
+    23
+    55
+    average of numbers is:31
+  </pre>
+</body>
+
+</html>

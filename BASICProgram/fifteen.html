@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>code</title>
+</head>
+
+<body>
+  <pre>
+    import java.time.LocalTime;
+    import java.time.format.DateTimeFormatter;
+    
+    class main15
+    {
+    public static void main(String st[])
+    {
+    LocalTime obj=LocalTime.now();
+    DateTimeFormatter formatter=DateTimeFormatter.ofPattern("HH:mm:ss");
+    String formattedTime=obj.format(formatter);
+    
+    System.out.println("Current system time:" + formattedTime);
+    }
+    }
+    OUTPUT:
+    Current system time:19:47:32
+  </pre>
+</body>
+
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>code</title>
+</head>
+
+<body>
+  <pre>
+    import java.io.BufferedReader;
+    import java.io.IOException;
+    import java.io.InputStreamReader;
+    
+    class main56
+    {
+    public static void main(String st[]) throws IOException
+    {
+    BufferedReader obj= new BufferedReader(new InputStreamReader(System.in));
+    int[] num=new int[5];
+    for(int i=0;i&lt5;i++)
+    {
+    System.out.println("Enter number:"  + (i+1) + ":");
+    num[i]=Integer.parseInt(obj.readLine());
+    }
+    
+    int sum=calculateSum(num);
+    
+    double average=calculateAverage(sum,num.length);
+    
+    System.out.println("Sum:" + sum);
+    System.out.println("Average:" + average);
+    }
+    
+    public static int calculateSum(int[] num)
+    {
+    int sum=0;
+    for(int num1:num)
+    {
+    sum=sum+num1;
+    }
+    return sum;
+    }
+    
+    public static double calculateAverage(int sum,int count)
+    {
+    return (double)sum/count;
+    }
+    }
+
+    OUTPUT:
+    Enter number1:
+     10
+    Enter number2:
+     2
+    Enter number3:
+     4
+    Enter number4:
+    32
+    Enter number5:
+    3
+     Sum:51
+    Average:10.2
+
+  </pre>
+</body>
+
+</html>

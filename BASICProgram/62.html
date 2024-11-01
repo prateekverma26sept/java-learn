@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>code</title>
+</head>
+
+<body>
+  <pre>
+    import java.util.Scanner;
+    import java.util.InputMismatchException;
+    
+    class main53
+    {
+    public static void main(String st[])
+    {
+    Scanner obj= new Scanner(System.in);
+    System.out.println("Enter a number:");
+    try{
+    int num=obj.nextInt();
+    
+    if(num&gt0)
+    {
+    System.out.println(num + "is a positive number");
+    }
+    else if(num&lt0)
+    {
+    System.out.println(num + "is a negative number");
+    }
+    else
+    {
+    System.out.println(num + "is zero");
+    }
+    }
+    catch(InputMismatchException e)
+    {
+    System.out.println("please enter only whole numbers..");
+    }
+    }
+    }
+
+    OUTPUT:
+    Enter a number:
+    12
+    12 is a positive number
+  
+    // one more time..
+    Enter a number:
+    1/3
+    please enter only whole numbers..
+
+    //one morw
+    Enter a number:
+    0
+    0is zer0
+  </pre>
+</body>
+
+</html>
