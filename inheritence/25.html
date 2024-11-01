@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>code</title>
+</head>
+
+<body>
+  <pre>
+    abstract class Bird 
+    {
+          abstract void fly();
+          abstract void makeSound();
+    }
+    class Eagle extends Bird 
+    {
+      void fly()
+        {
+            System.out.println("\nEagle soars high in the sky with powerful wing strokes.");
+         }
+       void makeSound()
+          {
+            System.out.println("Eagle makes a high-pitched, whistling sound.\n");
+        }
+    }
+    class Hawk extends Bird
+     {    
+      void fly()
+        {
+            System.out.println("Hawk glides and swoops with precise control.");
+        }
+       void makeSound()
+         {
+            System.out.println("Hawk makes a sharp, piercing screech.");
+         }
+    }
+     class main
+     {
+        public static void main(String st[]) 
+         {
+            Bird obj = new Eagle();
+            Bird obj1 = new Hawk();
+                    obj.fly();
+                   obj.makeSound();
+                   obj1.fly();
+                  obj1.makeSound();
+        }
+    }
+
+    OUTPUT:
+    Eagle soars high in the sky with powerful wing strokes.
+    Eagle makes a high-pitched, whistling sound.
+
+    Hawk glides and swoops with precise control.
+    Hawk makes a sharp, piercing screech.
+
+
+
+
+  </pre>
+</body>
+
+</html>

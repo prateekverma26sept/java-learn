@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>code</title>
+</head>
+
+<body>
+  <pre>
+    abstract class Shape
+    {
+       abstract void CalculateArea();
+       abstract void CalculatePerimeter();
+    }
+    class Circle extends Shape
+    {
+       void CalculateArea()
+        {
+                  double pi=3.14d;
+                  double r=9.16d;
+                  double area;
+                  area=pi*r*r;
+            System.out.println("Area of circle:"+ area);
+         }
+    void CalculatePerimeter()
+          {
+                  double pi=3.14d;
+                  double d=11.1d;
+                  double perimeter=pi*d;
+               System.out.println("perimeter of circle:"+perimeter);
+         }
+    }
+    class Triangle extends Shape
+    {
+     void CalculateArea()
+        {
+             double height=9.8d;
+             double base=9.7d;
+             double area2=(height*base)/2;
+           System.out.println("Area of triangle:"+area2);
+        }
+    void CalculatePerimeter()
+        {
+               double a=6.1d;
+               double b=4.6d;
+               double c=3.9d;
+               double perimeter=a+b+c;
+           System.out.println("Perimeter of triangle:"+perimeter);
+       }
+    }
+    class main
+    {
+      public static void main(String st[])
+        {
+             Circle obj=new Circle();
+             Triangle obj1=new Triangle();
+                    obj.CalculateArea();
+                    obj.CalculatePerimeter();
+                    obj1.CalculateArea();
+                    obj1.CalculatePerimeter();
+          }
+    }
+
+    OUTPUT:
+    Area of circle:263.463584
+    perimeter of circle:34.845
+    Area of triangle:47.53
+    Perimeter of triangle:14.6
+  </pre>
+</body>
+
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>code</title>
+</head>
+
+<body>
+  <pre>
+    package exception4;
+    class NumberIsPositive extends Throwable
+            {
+                public String getMessage()
+                {
+                    return "File contain positive number";
+                }
+            }
+    class Exception4
+            {
+                public static void main(String st[])
+                {
+                    try
+                    {
+                    java.io.File file = new java.io.File("text.txt");
+                    java.util.Scanner input = new java.util.Scanner(file);
+                    int num;
+                    while(input.hasNextLine())
+                    {
+                        while(input.hasNextInt())
+                        {
+                            num=input.nextInt();
+                            if(num > 0)
+                            {
+                                System.out.println(num);
+                                throw new NumberIsPositive();
+                            }
+                        
+                        }
+                    }
+                    }
+                     catch(java.io.FileNotFoundException e)
+                    {
+                        System.out.println(e.getMessage());
+                    }
+                    catch (java.util.InputMismatchException e)
+                    {
+                        System.out.println("File not contain Integer!");
+                    }
+                    catch (NumberIsPositive e)
+                    {
+                        System.out.println(e.getMessage());
+                    }
+                }   
+            }
+
+            
+  </pre>
+</body>
+
+</html>

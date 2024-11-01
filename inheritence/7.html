@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>code</title>
+</head>
+
+<body>
+  <pre>
+    package person;
+
+    class Person
+        {
+            private String firstName;
+            private String lastName;
+            private int employeeId;
+             String jobTitle;
+            Person(String fn,String ln)
+            {
+                firstName=fn;
+                lastName=ln;
+                
+            }
+            String getFirstName()
+                {
+                    return firstName;
+                }
+                String getLastName()
+                {
+                    return lastName;
+                }
+           
+        }
+        class Employee extends Person 
+                {
+                    private int employeeId;
+                    private String jobTitle;
+                    Employee(String fn,String ln, int empId,String jt)
+                    {
+                        super(fn,ln);
+                        employeeId=empId;
+                        jobTitle=jt;
+                    }
+                    int getEmployeeId()
+                    {
+                        return employeeId;
+                    }
+                    String getLastName()
+                    {
+                        System.out.println("Last Name : "+super.getLastName());
+                        return jobTitle;
+                    }
+             
+                }
+        class Main
+            {
+                public static void main(String st[])
+                    {
+                        Employee p1 = new Employee("Manjit","Kumar",1,"Manager");
+                        System.out.println("Name : "+p1.getFirstName());
+                        System.out.println("Job Title : "+p1.getLastName());
+                        System.out.println("Employee Id : "+p1.getEmployeeId());
+    
+                    }
+            }
+  </pre>
+</body>
+
+</html>

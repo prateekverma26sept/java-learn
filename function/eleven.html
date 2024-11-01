@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>code</title>
+</head>
+
+<body>
+  <pre>
+    class main11
+    {
+    public static void main(String st[])
+    {
+    System.out.println(areConsecutive(1,4,5));
+    
+    }
+    
+    public static boolean areConsecutive(int a,int b,int c)
+    {
+    int num[]={a,b,c};
+    java.util.Arrays.sort(num);
+    return(num[1]-num[0]==1) && (num[2]-num[1]==1);
+    }
+    }
+
+    OUTPUT:
+    false
+  </pre>
+</body>
+
+</html>

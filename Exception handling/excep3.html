@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>code</title>
+</head>
+
+<body>
+  <pre>
+    class main3
+    {
+    public static void main(String st[])
+    {
+    String fileName="textfile.txt";
+    try
+    {
+    readNonEmpty(fileName);
+    }
+    catch(Exception e)
+    {
+    System.out.println(e.getMessage());
+    }
+    }
+    
+    public static void readNonEmpty(String fileName) throws Exception
+    {
+     java.io.File file=new java.io.File(fileName);
+    if(file.length()>0)
+    {
+    System.out.println("file is not empty");
+    }
+    }
+    }
+
+    OUTPUT:
+     file is not empty
+  </pre>
+</body>
+
+</html>

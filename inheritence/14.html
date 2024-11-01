@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>code</title>
+</head>
+
+<body>
+  <pre>
+    abstract class A
+    {
+        abstract void disp();
+       void display()
+        {
+            System.out.println("diplaying content");
+        }
+    }
+    class B extends A
+    {
+       void disp()
+        {
+            System.out.println(" content");
+         }
+     void display()
+        {
+            System.out.println("changing content");
+        }
+    }
+    class main
+    {
+     public static void main(String st[])
+       {
+           A obj=new B();
+              obj.disp();
+               obj.display();
+         }
+    }
+    
+
+    OUTPUT:
+    content
+    changing content
+  </pre>
+</body>
+
+</html>

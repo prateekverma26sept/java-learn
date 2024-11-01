@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>code</title>
+</head>
+
+<body>
+  <pre>
+    package employee;
+
+
+    class Employee
+    
+     {
+    private double salary;
+    
+    public Employee(double salary)
+    
+      {
+      this.salary=salary;
+      }
+    
+      void work()
+    
+      {
+      System.out.println("Employee is working");
+      }
+    
+      double getSalary()
+    
+      {
+      return salary;
+      }
+      }
+    
+    
+    class HRManager extends Employee
+    
+      {
+    
+      public HRManager(double salary)
+    
+      {
+    
+      super(salary);
+      }
+    
+      void work()
+    
+      {
+      System.out.println("HRManager is managing employee");
+      }
+    
+      void addEmployee()
+    
+      {
+      System.out.println("HR Manager adding Employee");
+      }
+    
+      }
+    
+    class Main
+    
+      {
+      public static void main(String st[])
+    
+      {
+      Employee emp=new Employee(5000);
+    
+      emp.work();
+    
+      System.out.println("Salary : "+emp.getSalary());
+    
+      HRManager hrm=new HRManager(10000);
+    
+      hrm.work();
+    
+      System.out.println("Salary : "+hrm.getSalary());
+    
+      hrm.addEmployee();
+    
+      }
+      }
+    
+  </pre>
+</body>
+
+</html>

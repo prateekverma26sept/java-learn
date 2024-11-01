@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>code</title>
+</head>
+
+<body>
+  <pre>
+    class main3
+{
+public static void main(String st[])
+{
+printMiddle("Manjit");
+}
+
+public static void printMiddle(String str)
+{
+ int middleIndex=str.length()/2;
+if(str.length()%2==0)
+{
+System.out.println("String has even length,middle characters are:"+ str.charAt(middleIndex-1)+" and "+ str.charAt(middleIndex) );
+}else
+{
+System.out.println("Middle character is:"+ str.charAt(middleIndex));
+}
+
+}
+}
+
+OUTPUT:
+String has even length,middle character are:n and j
+  </pre>
+</body>
+
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>code</title>
+</head>
+
+<body>
+  <pre>
+    package bankaccount;
+
+class BankAccount 
+{
+   
+ private double balance;
+
+ 
+   public BankAccount(double bal) 
+{
+
+        balance = bal;
+  
+  }
+
+ 
+   public void deposit(double amount)
+ {
+  
+      balance += amount;
+ 
+       System.out.println("Deposited: " + amount);
+
+    }
+
+ 
+   public void withdraw(double amount)
+ {
+   
+     balance -= amount;
+ 
+       System.out.println("Withdrawn: " + amount);
+
+    }
+
+  
+  public double getBalance()
+ {
+     
+   return balance;
+ 
+   }
+
+}
+
+
+
+
+class SavingsAccount extends BankAccount
+ {
+ 
+   public SavingsAccount(double balance)
+ {
+   
+     super(balance);
+
+    }
+
+   
+ @Override
+    public void withdraw(double amount)
+ {
+   
+     if (getBalance() - amount < 100)
+ {
+    
+        System.out.println("Withdrawal not allowed. Balance will fall below $100.");
+ 
+       } else
+ {
+    
+        super.withdraw(amount);
+ 
+       }
+  
+  }
+
+}
+
+ 
+
+class Main
+ {
+    public static void main(String[] args)
+ {
+    
+    BankAccount account = new BankAccount(1000);
+ 
+       account.deposit(500);
+  
+      account.withdraw(200);
+ 
+       System.out.println("Balance: " + account.getBalance());
+
+ 
+       SavingsAccount savingsAccount = new SavingsAccount(1000);
+ 
+       savingsAccount.deposit(500);
+  
+      savingsAccount.withdraw(200);
+  
+      savingsAccount.withdraw(1300); 
+ 
+       System.out.println("Balance: " + savingsAccount.getBalance
+}
+
+}
+
+  </pre>
+</body>
+
+</html>

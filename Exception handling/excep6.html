@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>code</title>
+</head>
+
+<body>
+  <pre>
+    class NumberAreDuplicate extends Throwable
+    {
+        public String getMessage()
+        {
+            return "Number are Duplicate";
+        }
+    }
+class Exception6
+        {
+            public static void main(String st[])
+            {
+                 int arr[]=new int[5];
+                int i,j;
+                boolean isDuplicate = true;
+                try
+                {
+                java.io.BufferedReader input = new java.io.BufferedReader(new java.io.InputStreamReader(System.in));
+                arr[0]=Integer.parseInt(input.readLine());
+                for(i=1;i&ltarr.length;i++)
+                {
+                    for(j=i-1;j&lti;j++)
+                    {
+
+                    arr[i]=Integer.parseInt(input.readLine());
+                    if(arr[i]==arr[j])
+                    {
+                        throw new NumberAreDuplicate();
+                    }
+                    else
+                    {
+                        isDuplicate=false;
+                    }
+                    }
+                    
+                }
+                if(!isDuplicate)
+                {
+                    System.out.println("Number are not Duplicate");
+                }
+                }
+                catch(java.io.IOException e)
+                {
+                    System.out.println(e.getMessage());
+                }
+                catch(NumberFormatException e)
+                {
+                    System.out.println(e.getMessage());
+                }
+                catch(NumberAreDuplicate e)
+                {
+                    System.out.println(e.getMessage());
+                }
+            }
+        }
+  </pre>
+</body>
+
+</html>

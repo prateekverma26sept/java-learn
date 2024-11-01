@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>code</title>
+</head>
+
+<body>
+  <pre>
+    class main13
+    {
+   
+      
+       public static void main(String st[])
+       {
+   
+    
+          int num = 17; // Replace with your number
+   
+    
+          try
+           {
+     
+              System.out.println("Number: " + num);
+    
+               try 
+                 {
+    
+                   if (num % 2 == 0)
+                    {
+     
+                     System.out.println(num + " is even.");
+   
+                   } else
+                     {
+     
+                      System.out.println(num + " is odd.");
+   
+                   }
+    
+                  }
+               catch (ArithmeticException e)
+                 {
+     
+   
+                   System.out.println("Cannot divide by zero.");
+      
+               }
+    
+               } 
+          catch (Exception e)
+         {
+       
+   
+               System.out.println("An error occurred: " + e.getMessage());
+   
+           }
+    
+      }
+   
+   }
+
+   OUTPUT:
+   Number:17
+    17 is odd.
+  </pre>
+</body>
+
+</html>

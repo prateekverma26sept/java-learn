@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>code</title>
+</head>
+
+<body>
+  <pre>
+    abstract class Shape3D
+{
+      abstract double calculateVolume() ;
+      abstract double calculateSurfaceArea();
+}
+
+class Sphere extends Shape3D
+{
+    double calculateVolume()
+      {
+           double pi=3.1415d;
+           double r=8.19d;
+          double volume=(4/3)*pi*r*r*r;
+        System.out.println("volume of sphere:"+volume);
+return volume;
+       }
+    double calculateSurfaceArea()
+      {
+            double pi=3.14d;
+           double r=8.19d;
+          double SA=4*pi*r*r;
+        System.out.println("Surface Area of sphere:"+SA);
+return SA;
+       }
+}
+class Cube extends Shape3D
+{
+    double calculateVolume()
+      { 
+            double side=19.1d;
+            double volume=side*side*side;
+          System.out.println("volume of cube:"+volume);
+         return volume;
+      }
+   double calculateSurfaceArea()
+      {
+               double side=19.1d;
+               double SA=6*side*side;
+            System.out.println("Surface area of cube:"+SA);
+         return SA;
+      }
+}
+class main
+{
+   public static void main(String st[])
+    {
+       Sphere obj=new Sphere();
+                    obj.calculateVolume();
+                    obj.calculateSurfaceArea();
+         Cube obj1=new Cube();
+                    obj1.calculateVolume();
+                    obj1.calculateSurfaceArea();
+
+     }
+}
+
+
+OUTPUT:
+volume of sphere:1725.7932631484998
+Surface Area of sphere:842.475815999999
+volume of cube:6967.87100000002
+Surface area of cube:2188.86
+  </pre>
+</body>
+
+</html>

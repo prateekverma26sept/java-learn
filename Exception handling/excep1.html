@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>code</title>
+</head>
+
+<body>
+  <pre>
+    class main1
+    {
+    public static void main(String st[])
+    {
+    try{
+    System.out.println(Integer.parseInt(st[0]));
+    }
+    catch(ArrayIndexOutOfBoundsException e)
+    {
+    System.out.println("please enter any value:" + e.getMessage());
+    }
+    catch(NumberFormatException e)
+    {
+    System.out.println("please enter only integer:" + e.getMessage());
+    }
+    }
+    }
+       
+    OUTPUT:
+     javac excep1.java 
+     java main1 12
+     12  
+    </pre>
+</body>
+
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>code</title>
+</head>
+
+<body>
+  <pre>
+    package exception8;
+    class NotConnected extends Throwable 
+            {
+                public String getMessage()
+                {
+                    return "Connection not Successful!";
+                }
+            }
+    class Exception8
+        {
+            public static void main(String st[])
+            {
+                java.sql.Connection con =null;
+                try
+                {
+                Class.forName("com.mysql.cj.jdbc.Driver");
+                con = java.sql.DriverManager.getConnection("jdbc:mysql://localhost:/DB","root","java");
+                System.out.println(con);
+                if(con==null)
+                {
+                    throw new NotConnected();
+                }
+                }
+                catch(ClassNotFoundException e)
+                {
+                    System.out.println(e.getMessage());
+                }
+                catch(java.sql.SQLException e)
+                {
+                    System.out.println(e.getMessage());
+                }
+                catch(NotConnected e)
+                {
+                    System.out.println(e.getMessage());
+                }
+            }
+        }
+  </pre>
+</body>
+
+</html>

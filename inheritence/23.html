@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>code</title>
+</head>
+
+<body>
+  <pre>
+    abstract class Instrument
+    {
+          abstract void play();
+         abstract void tune();
+    }
+   class Glockenspiel extends Instrument
+    {
+       void play()
+         {
+              System.out.println("Playing the Glockenspiel. ");
+        }
+      void tune()
+        {
+           System.out.println("Tuning the Glockenspiel .\n");
+       }
+   }
+   class Violin extends Instrument 
+   {
+       void play()
+         {
+            System.out.println("Playing the Violin with a bow.");
+        }
+       void tune()
+       {
+           System.out.println("Tuning the Violin by adjusting the pegs and fine tuners.");
+       }
+   }
+    class main {
+       public static void main(String[] st)
+          {
+           Instrument obj= new Glockenspiel();
+           Instrument obj1= new Violin();
+                              obj.play();
+                              obj.tune();
+                              obj1.play();
+                             obj1.tune();
+        }
+   }
+
+   
+   OUTPUT:
+   Playing the Glockenspiel. 
+   Tuning the Glockenspiel .
+   Playing the Violin with a bow.
+   Tuning the Violin by adjusting the pegs and fine tuners.
+
+  </pre>
+</body>
+
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>code</title>
+</head>
+
+<body>
+  <pre>
+    abstract class Person
+    {
+        abstract void eat();
+        abstract void exercise();
+   }
+  class Athlete extends Person
+   {
+      void eat() 
+        {
+          System.out.println("Athlete eats food with high protein and carbohydrates.");
+        }
+      void exercise() 
+        {
+          System.out.println("Athlete follows a training routine with strength and cardio exercises.\n");
+      }
+  }
+  class LazyPerson extends Person 
+  {
+      void eat() 
+        {
+            System.out.println("Lazy person prefers fast food and snacks.");
+        }
+      void exercise()
+        {
+            System.out.println("Lazy person avoids physical activity and prefers to jus lay on his bed.");
+      }
+  }
+  class main
+   {
+      public static void main(String[] st) 
+        {
+             Person obj = new Athlete();
+             Person obj1 = new LazyPerson();
+                           obj.eat();
+                           obj.exercise();
+                          obj1.eat();
+                          obj1.exercise();
+      }
+  }
+
+  
+  OUTPUT:
+  Athlete eats food with high protein and carbohydrates.
+  Athlete follows a training routine with strength and cardio exercises.
+  Lazy person prefers fast food and snacks.
+  Lazy person avoids physical activity and prefers to jus lay on his bed.
+  </pre>
+</body>
+
+</html>

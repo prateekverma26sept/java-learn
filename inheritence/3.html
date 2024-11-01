@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>code</title>
+</head>
+
+<body>
+  <pre>
+    class Shape
+{
+   void getArea()
+    {
+         double pi=3.14;
+              double r=12.8;
+             double area1;
+           area1=pi*r*r;
+        System.out.println("Area of circle: "+ area1);
+     }
+}
+class Rectangle extends Shape
+{
+   public void getArea()
+      {
+              float height=8.6f;
+              float width=7.9f;
+              float area;
+          area=height*width;
+       System.out.println("area of rectangle is: "+ area);
+     }
+} 
+class main
+{
+ public static void main(String st[])
+  {
+     Rectangle obj=new Rectangle();
+                       obj.getArea();
+   }
+}
+
+OUTPUT:
+area of rectangle is:67.94
+  </pre>
+</body>
+
+</html>

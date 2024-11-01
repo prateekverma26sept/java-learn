@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>code</title>
+</head>
+
+<body>
+  <pre>
+    abstract class Employee
+    {
+         protected String name;
+         protected int id;
+         abstract double calculateSalary();
+         abstract void displayInfo();
+     public Employee(String n,int Id)
+      { 
+          name=n;
+          id=Id;
+      }
+    }
+    
+    class Manager extends Employee
+    {
+        private double salary;
+        private double bonus;
+    
+     public Manager(String n,int Id,double s,double b)
+      {
+         super(n,Id);
+         salary=s;
+          bonus=b;
+    }
+    
+        double calculateSalary()
+          {
+              return salary+bonus;
+           }  
+       void displayInfo()
+         {
+            System.out.println("\nManager Information:-");
+            System.out.println("Name:" + name);
+            System.out.println("Id:" + id);
+            System.out.println("Total Salary:"+calculateSalary());
+         }
+    }
+    class Programmer extends Employee
+    {
+        private double salary;
+        private int overtime;
+        private double bonus;
+    public Programmer(String n,int Id,double s,double b,int o)
+      {
+         super(n,Id);
+         salary=s;
+          bonus=b;
+         overtime=o;
+    }
+    
+        double calculateSalary()
+          {
+              return salary+bonus+overtime;
+           }  
+       void displayInfo()
+         {
+            System.out.println("\nProgrammer Information:-");
+            System.out.println("Name:" + name);
+            System.out.println("Id:" + id);
+            System.out.println("Total Salary:"+calculateSalary());
+         }
+    }
+    class main
+    { 
+       public static void main(String st[])
+    {
+       Manager obj=new Manager("shanaya" , 890,90000,6000);
+                       obj.displayInfo();
+    Programmer obj1=new Programmer("anaya" ,910,60000,2000,1000);
+                       obj1.displayInfo();
+    
+    }
+    }
+
+    OUTPUT:
+    Name:shanaya
+    ID=890
+    Total Salary:96000.0
+
+    Name:anaya
+    ID=910
+    Total Salary:63000.0
+
+
+
+</pre>
+</body>
+
+</html>

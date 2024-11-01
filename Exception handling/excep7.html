@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>code</title>
+</head>
+
+<body>
+  <pre>
+    class main7
+    {
+    public static void main(String st[])
+    {
+    String s="hello";
+    //System.out.println("your word:" + s);
+    try
+    {
+    System.out.println(checkVowel(s));
+    }
+    catch(Exception e)
+    {
+    System.out.println(e.getMessage());
+    }
+    }
+    
+    public static String checkVowel(String s) throws Exception
+    {
+    if(s.matches(".[aeiouAEIOU]."))
+    {
+    System.out.println(s);
+    }
+    else
+    {
+    System.out.println("no vowel found in word");
+    }
+    
+    return null;
+    }
+    }
+
+    OUTPUT:
+    no vowel found in word
+    null
+  </pre>
+</body>
+
+</html>

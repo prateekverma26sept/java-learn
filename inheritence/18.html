@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>code</title>
+</head>
+
+<body>
+  <pre>
+    abstract class Animal
+{
+   abstract void eat();
+   abstract void sleep();
+}
+class Lion extends Animal
+{
+   void eat()
+     {
+         System.out.println("lion eats meat.");
+      }
+  void sleep()
+     {
+         System.out.println("lion sleeps in the savannah.");
+      }
+}
+class Tiger extends Animal
+{
+   void eat()
+     {
+         System.out.println("tiger eats large prey.");
+      }
+  void sleep()
+     {
+         System.out.println("tiger sleeps in the jungle.");
+      }
+}
+class Deer extends Animal
+{
+   void eat()
+     {
+         System.out.println("deer eats plants and leaves.");
+      }
+  void sleep()
+     {
+         System.out.println("deer sleeps in the forest");
+      }
+}
+class main
+{
+  public static void main(String st[])
+    {
+         Animal obj = new Lion();
+        Animal obj1 = new Tiger();
+        Animal obj2 = new Deer();
+                  obj.eat();
+                  obj.sleep();     
+                  obj1.eat();
+                  obj1.sleep();
+                  obj2.eat();
+                 obj2.sleep();
+       }
+}
+
+OUTPUT:
+lion eats meat.
+lion sleeps in the savannah.
+tiger eats large prey.
+tiger sleeps in the jungle.
+deer eats plants and leaves.
+deer sleeps in the forest
+</pre>
+</body>
+
+</html>

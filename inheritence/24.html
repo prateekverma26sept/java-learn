@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>code</title>
+</head>
+
+<body>
+  <pre>
+    abstract class Shape2D 
+    {
+          abstract void draw();
+          abstract void resize();
+    }
+     class Rectangle extends Shape2D 
+      {
+            private double width;
+            private double height;
+        public Rectangle(double w, double h)
+          {
+              width = w;
+              height = h;
+          }
+       void draw() 
+         {
+            System.out.println("\nDrawing a Rectangle with :-\nwidth:" + width +"\nheight :"+height);
+         }
+      void resize()
+       {
+            width *= 1.1; 
+            height *= 1.2; 
+            System.out.println("\nResized Rectangle to new:-\n width :"+width+"\nheight: "+ height);
+        }
+    }
+    class Circle extends Shape2D
+     {
+          private double radius;
+        public Circle(double r)
+          {
+            radius = r;
+         }
+       void draw()
+          {
+               System.out.println("\nDrawing a Circle with:-\n radius: " + radius );
+          }
+      void resize()
+        {
+            radius *= 1.2; 
+            System.out.println("\nResized Circle to new :-\n radius :" + radius );
+        }
+    }
+    class main
+    {
+       public static void main(String st[])
+        {
+                  Shape2D obj = new Rectangle(3.0, 2.0);
+                  Shape2D obj1 = new Circle(4.0);
+                                    obj.draw();
+                                    obj.resize();
+                                     obj1.draw();
+                                    obj1.resize();
+         }
+    }
+
+    OUTPUT:
+    Drawing a Rectangle with :
+    width:3.0
+    height:2.0
+
+    Resized Rectangle to new:
+    width:3.30000000003
+    height:204
+
+    Drawing a Circle with:
+     radius:4.0
+
+    Resized Circle to new :
+    radius:4.8
+  </pre>
+</body>
+
+</html>

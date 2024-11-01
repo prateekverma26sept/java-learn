@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>code</title>
+</head>
+
+<body>
+  <pre>
+    abstract class Vehicle 
+    {
+           abstract void startEngine();
+          abstract void stopEngine();
+    }
+    class Car extends Vehicle
+     {
+        void startEngine()
+          {
+              System.out.println("Car engine started.");
+           }
+        void stopEngine()
+          {
+               System.out.println("Car engine stopped.");
+          }
+    }
+    class Motorcycle extends Vehicle
+     {
+         void startEngine()
+           {
+               System.out.println("Motorcycle engine started.");
+           }
+        void stopEngine()
+         {
+              System.out.println("Motorcycle engine stopped.");
+         }
+    }
+    class main 
+    {
+        public static void main(String st[])
+          {
+            Vehicle obj = new Car();
+            Vehicle obj1= new Motorcycle();
+                         obj.startEngine();
+                         obj.stopEngine();
+                         obj1.startEngine();
+                        obj1.stopEngine();
+        }
+    }
+
+    OUTPUT:
+    Car engine started.
+    Car engine stopped.
+    Motorcycle engine started.
+    Motorcycle engine stopped.
+  </pre>
+</body>
+
+</html>

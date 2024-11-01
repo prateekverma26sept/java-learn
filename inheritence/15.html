@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>code</title>
+</head>
+
+<body>
+  <pre>
+    abstract class Animal
+{
+  abstract void sound();
+}
+class Lion extends Animal
+{
+   void sound()
+    {
+       System.out.println("Lion roars");
+   }
+}
+class Tiger extends Animal
+{
+   void sound()
+    {
+       System.out.println("Tiger growls");
+   }
+}
+class main
+{
+  public static void main(String st[])
+    {
+       Animal obj=new Lion();
+        Animal obj1=new Tiger();
+               obj.sound();
+              obj1.sound();
+   }
+}
+
+OUTPUT:
+Lion roars
+Tiger growls
+
+
+
+  </pre>
+</body>
+
+</html>
