@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/programView.css">
+</head>
+
+<body>
+    
+<pre><code>
+    #include &lt;stdio.h&gt;
+
+    void displayUpperTriangular(int size, int mat[size][size]) {
+        int i, j;
+        for (i = 0; i &lt; size; i++) {
+            for (j = 0; j &lt; size; j++) {
+                if (j &gt;= i) {
+                    printf("%d\t", mat[i][j]);
+                } else {
+                    printf("0\t");
+                }
+            }
+            printf("\n");
+        }
+    }
+
+    int main() {
+        int size, i, j;
+
+        // Get the dimension for the square matrix
+        printf("Enter the size of the square matrix: ");
+        scanf("%d", &size);
+
+        int mat[size][size];
+
+        // Input elements for the matrix
+        printf("Enter elements of the matrix:\n");
+        for (i = 0; i &lt; size; i++) {
+            for (j = 0; j &lt; size; j++) {
+                printf("Enter element at Row %d Column %d: ", i + 1, j + 1);
+                scanf("%d", &mat[i][j]);
+            }
+        }
+
+        // Display the upper triangular matrix
+        printf("\nThe Upper Triangular Matrix is:\n");
+        displayUpperTriangular(size, mat);
+
+        return 0;
+    }
+</code></pre>
+
+<h1>OUTPUT</h1>
+<pre>
+    Enter the size of the square matrix: 3
+    Enter elements of the matrix:
+    Enter element at Row 1 Column 1: 1
+    Enter element at Row 1 Column 2: 2
+    Enter element at Row 1 Column 3: 3
+    Enter element at Row 2 Column 1: 4
+    Enter element at Row 2 Column 2: 5
+    Enter element at Row 2 Column 3: 6
+    Enter element at Row 3 Column 1: 7
+    Enter element at Row 3 Column 2: 8
+    Enter element at Row 3 Column 3: 9
+
+    The Upper Triangular Matrix is:
+    1   2   3
+    0   5   6
+    0   0   9
+</pre>
+</body>
+
+</html>

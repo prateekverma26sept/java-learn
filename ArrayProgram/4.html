@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>code</title>
+</head>
+
+<body>
+  <pre>
+    class  main4
+{
+public static void main(String st[])
+{
+int array[]={1,2,3,4,2,3,4,5,6,2,3,4};
+
+System.out.println("Duplicate elements:");
+
+for(int i=0;i&ltarray.length;i++)
+{
+int count=0;
+for(int j=0;j&ltarray.length;j++)
+{
+if(array[i]==array[j])
+{
+count++;
+}
+}
+
+if(count&gt1)
+{
+int flag=0;
+for(int k=0;k&lti;k++)
+{
+
+flag=1;
+break;
+}
+}
+if(flag==0)
+{
+System.out.println(array[i]);
+}
+}
+}
+}
+
+OUTPUT:
+Duplicate elements:
+2
+3
+4
+  </pre>
+</body>
+
+</html>

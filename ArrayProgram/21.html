@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>code</title>
+</head>
+
+<body>
+  <pre>
+    class main22
+    {
+    public static void main(String st[])
+    {
+    int arr[]={5,2,8,1,9,3,7,6,4};
+    
+    System.out.println("Even numbers:");
+    printEvenNumber(arr);
+    
+    System.out.println("\nOdd numbers:");
+    printOddNumber(arr);
+    }
+    
+    public static void printEvenNumber(int arr[])
+    {
+    for(int i=0;i&ltarr.length;i++)
+    {
+    if(arr[i]%2==0)
+    {
+    System.out.print(arr[i]+" ");
+    } 
+    }
+    }
+    
+    public static void printOddNumber(int arr[])
+    {
+    for(int i=0;i&ltarr.length;i++)
+    {
+    if(arr[i]%2!=0)
+    {
+    System.out.print(arr[i]+ " ");
+    }
+    }
+    }
+    }
+
+    OUTPUT:
+    Even numbers:
+    2 8 6 4
+    Odd numbers:
+    5 1 9 3 7
+  </pre>
+</body>
+   
+</html>

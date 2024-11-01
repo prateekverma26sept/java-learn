@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sparse Matrix Checker</title>
+    <link rel="stylesheet" href="../css/programView.css">
+</head>
+
+<body>
+    
+<pre><code>
+    #include &lt;stdio.h&gt;
+
+    int isSparseMatrix(int rows, int cols, int mat[rows][cols]) {
+        int i, j, zeroCount = 0;
+        int totalElements = rows * cols;
+
+        for (i = 0; i &lt; rows; i++) {
+            for (j = 0; j &lt; cols; j++) {
+                if (mat[i][j] == 0) {
+                    zeroCount++;
+                }
+            }
+        }
+
+        // A matrix is sparse if more than half of its elements are zero
+        return zeroCount &gt; (totalElements / 2);
+    }
+
+    int main() {
+        int rows, cols, i, j;
+
+        // Get dimensions for the matrix
+        printf("Enter number of rows: ");
+        scanf("%d", &rows);
+        printf("Enter number of columns: ");
+        scanf("%d", &cols);
+
+        int mat[rows][cols];
+
+        // Input elements for the matrix
+        printf("Enter elements of the matrix:\n");
+        for (i = 0; i &lt; rows; i++) {
+            for (j = 0; j &lt; cols; j++) {
+                printf("Enter element at Row %d Column %d: ", i + 1, j + 1);
+                scanf("%d", &mat[i][j]);
+            }
+        }
+
+        // Check if the matrix is sparse
+        if (isSparseMatrix(rows, cols, mat)) {
+            printf("\nThe matrix is a Sparse Matrix.\n");
+        } else {
+            printf("\nThe matrix is NOT a Sparse Matrix.\n");
+        }
+
+        return 0;
+    }
+</code></pre>
+
+<h1>OUTPUT</h1>
+<pre>
+    Enter number of rows: 3
+    Enter number of columns: 3
+    Enter elements of the matrix:
+    Enter element at Row 1 Column 1: 0
+    Enter element at Row 1 Column 2: 0
+    Enter element at Row 1 Column 3: 1
+    Enter element at Row 2 Column 1: 0
+    Enter element at Row 2 Column 2: 0
+    Enter element at Row 2 Column 3: 0
+    Enter element at Row 3 Column 1: 0
+    Enter element at Row 3 Column 2: 2
+    Enter element at Row 3 Column 3: 0
+
+    The matrix is a Sparse Matrix.
+</pre>
+</body>
+
+</html>

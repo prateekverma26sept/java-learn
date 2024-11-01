@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>code</title>
+</head>
+
+<body>
+  <pre>
+    import java.util.Arrays;
+
+    class main17
+    {
+    public static void main(String st[])
+    {
+    int arr[]={5,2,8,1,9,3,7,6,4};
+    System.out.println("original array:");
+    printArray(arr);
+    int secondLargest=findSecondLargest(arr);
+    
+    System.out.println("\nsecond largest number in array:"+secondLargest);
+    
+    }
+    
+    public static int findSecondLargest(int arr[])
+    {
+    
+    Arrays.sort(arr);
+    if(arr.length&lt2)
+    {
+    System.out.println("Array does not have 2 elements");
+    return -1;
+    }
+    return arr[arr.length-2];
+    }
+    
+    public static void printArray(int arr[])
+    {
+    for(int i=0;i&ltarr.length;i++)
+    {
+    System.out.print(arr[i]+ " ");
+    }
+    }
+    }
+    OUTPUT:
+    original array:
+    5,2,8,1,9,3,7,6,4
+    second largest number in array:8
+  </pre>
+</body>
+   
+</html>

@@ -1,0 +1,38 @@
+import javax.swing.*;
+import java.awt.*;
+
+public class SmilingFace extends JPanel {
+    @Override
+    protected void paintComponent(Graphics g) {
+        super.paintComponent(g);
+        drawSmilingFace(g);
+    }
+
+    private void drawSmilingFace(Graphics g) {
+        // Draw the face
+        g.setColor(Color.YELLOW);
+        g.fillOval(50, 50, 200, 200); // Face
+
+        // Draw the eyes
+        g.setColor(Color.BLACK);
+        g.fillOval(100, 100, 20, 20); // Left eye
+        g.fillOval(180, 100, 20, 20); // Right eye
+
+        // Draw the mouth
+        g.setColor(Color.RED);
+        g.drawArc(100, 120, 100, 100, 0, -180); // Mouth
+
+        // Optionally, draw a smile using arc
+        g.setColor(Color.BLACK);
+        g.drawArc(100, 120, 100, 100, 0, -180); // Smiling mouth
+    }
+
+    public static void main(String[] args) {
+        JFrame frame = new JFrame("Smiling Face");
+        SmilingFace smilingFace = new SmilingFace();
+        frame.add(smilingFace);
+        frame.setSize(300, 300);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setVisible(true);
+    }
+}

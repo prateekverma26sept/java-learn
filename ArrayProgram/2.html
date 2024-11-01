@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>code</title>
+</head>
+
+<body>
+  <pre>
+    class main1
+    {
+     public static void main(String st[])
+    {
+     int arr[]={1,2,3,4,2,3,4,5,6,2,3,4};
+    int frequency[]=new int[arr.length];
+    
+    for(int i=0;i&ltarr.length;i++)
+    {
+    int count=0;
+    for(int j=0;j&ltarr.length;j++)
+    {
+     if(arr[i]==arr[j])
+    {
+    count++;
+    }
+    }
+    
+    frequency[i]=count;
+    }
+    System.out.println("frequency of each elements:");
+    for(int i=0;i&ltarr.length;i++)
+    {
+    System.out.println(arr[i]+":"+frequency[i]);
+    }
+    }
+    }
+
+    OUTPUT:
+    frequency of each elements:
+    1:1
+    2:3
+    3:3
+    4:3
+    2:3
+    3:3
+    4:3
+    5:1
+    6:1
+    2:3
+    3:3
+    4:3
+  </pre>
+</body>
+
+</html>

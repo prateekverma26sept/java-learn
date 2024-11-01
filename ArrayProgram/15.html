@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>code</title>
+</head>
+
+<body>
+  <pre>
+    import java.util.Arrays;
+
+    class main15
+    {
+    public static void main(String st[])
+    {
+     int arr[]={5,2,8,1,9};
+    
+    System.out.println("Original array:");
+    printArray(arr);
+    
+    sortDesecending(arr);
+    System.out.println("\nArray after sorting:");
+    printArray(arr);
+    }
+    
+    public   static void sortDesecending(int arr[])
+    {
+    for(int i=0;i&ltarr.length;i++)
+    {
+    for(int j=i+1;j&ltarr.length;j++)
+    {
+    if(arr[i]&ltarr[j])
+    {
+     int temp=arr[i];
+    arr[i]=arr[j];
+    arr[j]=temp;
+    }
+    }
+    }
+    }
+    
+    public static void printArray(int arr[])
+    {
+    
+    for(int i=0;i&ltarr.length;i++)
+    {
+    System.out.print(arr[i] + " ");
+    }
+    }
+    
+    }
+    OUTPPUT:
+    Original array:
+    5,2,8,1,9
+    Array after sorting:
+    9 8 5 2 1
+  </pre>
+</body>
+   
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>code</title>
+</head>
+
+<body>
+  <pre>
+    import java.util.Arrays;
+
+    class main18
+    {
+    public static void main(String st[])
+    {
+    int arr[]={5,2,8,1,9,3,7,6,4};
+    
+    System.out.println("original array:");
+    printArray(arr);
+    
+    int largest=findLargest(arr);
+    System.out.println("\nLargest number in array is:"+largest);
+    }
+    
+    public static int findLargest(int arr[])
+    {
+    Arrays.sort(arr);
+    if(arr.length==0)
+    {
+    System.out.println("Array is empty");
+    return -1;
+    }
+    return arr[arr.length-1];
+    }
+    
+    public static void printArray(int arr[])
+    {
+    for(int i=0;i&ltarr.length;i++)
+    {
+    System.out.print(arr[i] + " ");
+    }
+    }
+    }
+    OUTPUT:
+    original array:
+    5,2,8,1,9,3,7,6,4
+    Largest number in array is:9
+  </pre>
+</body>
+   
+</html>

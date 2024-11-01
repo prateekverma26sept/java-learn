@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/programView.css">
+</head>
+
+<body>
+    
+<pre><code>
+    #include &lt;stdio.h&gt;
+    
+    void display(int rows, int cols, int mat[rows][cols]) {
+        int i, j;
+        for (i = 0; i &lt; rows; i++) {
+            for (j = 0; j &lt; cols; j++) {
+                printf("%d\t", mat[i][j]);
+            }
+            printf("\n");
+        }
+    }
+
+    int main() {
+        int rows, cols, i, j;
+
+        // Get the number of rows and columns from the user
+        printf("Enter number of rows: ");
+        scanf("%d", &rows);
+        printf("Enter number of columns: ");
+        scanf("%d", &cols);
+
+        int mat[rows][cols];
+
+        // Input matrix elements from the user
+        for (i = 0; i &lt; rows; i++) {
+            for (j = 0; j &lt; cols; j++) {
+                printf("Enter element at Row %d Column %d: ", i + 1, j + 1);
+                scanf("%d", &mat[i][j]);
+            }
+        }
+
+        // Display the matrix
+        printf("\nThe Matrix is:\n");
+        display(rows, cols, mat);
+
+        return 0;
+    }
+</code></pre>
+
+<h1>OUTPUT</h1>
+<pre>
+    Enter number of rows: 3
+    Enter number of columns: 3
+    Enter element at Row 1 Column 1: 5
+    Enter element at Row 1 Column 2: 2
+    Enter element at Row 1 Column 3: 8
+    Enter element at Row 2 Column 1: 7
+    Enter element at Row 2 Column 2: 3
+    Enter element at Row 2 Column 3: 6
+    Enter element at Row 3 Column 1: 4
+    Enter element at Row 3 Column 2: 9
+    Enter element at Row 3 Column 3: 1
+
+    The Matrix is:
+    5   2   8
+    7   3   6
+    4   9   1
+</pre>
+</body>
+
+</html>
